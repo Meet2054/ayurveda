@@ -1,5 +1,4 @@
 import { StaticImageData } from 'next/image';
-
 export interface Event {
     id: number;
     name: string;
@@ -8,8 +7,8 @@ export interface Event {
     venue: string;
     organizer: string;
     attendees: number;
-    imageUrl: StaticImageData;  // Update this type
+    imageUrl: StaticImageData; // Assuming you're using static images from Next.js
     status: string;
-    description?: string,
-
-}
+    description?: string;  // Make 'description' optional if not all events have it
+  }
+  

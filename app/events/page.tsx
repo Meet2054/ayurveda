@@ -1,9 +1,7 @@
-
-
 "use client"
-
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import { Event } from './components/event';
+import { Event } from './components/event'; // Assuming you have this event interface defined
 import img1 from '@/public/assets/img1.jpg';
 import Image from 'next/image';
 
@@ -11,18 +9,19 @@ const EventsPage: React.FC = () => {
   const [filter, setFilter] = useState<'upcoming' | 'past'>('upcoming');
   
   const currentDate = new Date();
+  const router = useRouter();  // Initialize useRouter
 
   const events: Event[] = [
     {
       id: 1,
       name: 'Cosmos Mumbai led by Warden Protocol',
-      date: '2024-09-28T14:00:00',
+      date: '2024-07-28T14:00:00',
       time: '2:00 PM',
       venue: 'Lumos Cowork',
       organizer: 'Cosmoverse Dubai, Rhythm Jain & Warden',
       attendees: 241,
       imageUrl: img1,
-      status: 'LIVE',
+      status: 'Completed',
     },
     {
       id: 2,
@@ -81,13 +80,18 @@ const EventsPage: React.FC = () => {
     },
   ];
 
+  // Navigate to the registration page with the event ID
+  const eventHandler = (eventId: number) => {
+    router.push(`/eventregestration/${eventId}`);  // Navigate to dynamic event page
+  };
+  
   const upcomingEvents = events.filter(event => new Date(event.date) >= currentDate);
   const pastEvents = events.filter(event => new Date(event.date) < currentDate);
 
   return (
-    <div className="max-w-4xl bg-white mx-auto py-8 px-4 md:px-6">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-semibold text-white">Events List</h2>
+    <div className="max-w-4xl bg-blue-300 mx-auto py-8 px-4 md:px-6 flex flex-col ">
+      <div className="flex items-center justify-between mb-6 md:px-2 ">
+        <h2 className="text-2xl font-semibold ">Events List</h2>
 
         <div className="flex space-x-4">
           <button
@@ -108,11 +112,14 @@ const EventsPage: React.FC = () => {
       {filter === 'upcoming' ? (
         <div className="flex flex-col justify-center">
           {upcomingEvents.map(event => (
-            <div key={event.id} className="bg-gray-800 text-white p-4 mb-6 rounded-lg mx-2"> 
-              <div className="flex">
-                <Image src={event.imageUrl} alt={event.name} className="w-24 h-24 rounded-lg object-cover mr-4" />
+            <div
+              key={event.id}
+              onClick={() => eventHandler(event.id)}  // Pass event ID to eventHandler
+              className="bg-gray-800 text-white p-4 mb-6 rounded-lg mx-2 cursor-pointer"
+            >
+              <div className="flex justify-between">
                 <div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 pb-2">
                     <span className="bg-red-500 text-xs px-2 py-1 rounded">{event.status}</span>
                     <span className="text-sm">{event.time}</span>
                   </div>
@@ -124,24 +131,30 @@ const EventsPage: React.FC = () => {
                     <span className="text-xs text-gray-300">+{event.attendees}</span>
                   </div>
                 </div>
+                <Image src={event.imageUrl} alt={event.name} className="w-36 h-36 rounded-lg object-cover mr-1" />
               </div>
             </div>
           ))}
         </div>
       ) : (
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-col justify-center">
           {pastEvents.map(event => (
-            <div key={event.id} className="bg-gray-800 text-white p-4 mb-6 rounded-lg w-[80%] mx-2"> 
-              <div className="flex">
-                <Image src={event.imageUrl} alt={event.name} className="w-24 h-24 rounded-lg object-cover mr-4" />
+            <div
+              key={event.id}
+              className="bg-gray-800 text-white p-4 mb-6 rounded-lg mx-2 cursor-pointer"
+              onClick={() => eventHandler(event.id)}  // Pass event ID to eventHandler
+            >
+              <div className="flex justify-between">
                 <div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 pb-2">
+                    <span className="bg-red-500 text-xs px-2 py-1 rounded">{event.status}</span>
                     <span className="text-sm">{event.time}</span>
                   </div>
                   <h3 className="text-xl font-bold">{event.name}</h3>
                   <p className="text-gray-400">{event.organizer}</p>
                   <p className="text-gray-400">{event.venue}</p>
                 </div>
+                <Image src={event.imageUrl} alt={event.name} className="w-36 h-36 rounded-lg object-cover mr-1" />
               </div>
             </div>
           ))}
