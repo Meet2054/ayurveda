@@ -1,8 +1,12 @@
+"use client"
+
 import React from 'react';
 import img1 from '@/public/assets/img1.jpg';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import { CalendarIcon, VideoCameraIcon } from '@heroicons/react/solid';
+import { useRouter } from 'next/navigation';
+
 
 
 
@@ -20,6 +24,12 @@ interface Event {
 }
 
 const EventRegistration = ({ params }: { params: { id: string } }) => {
+  const router = useRouter(); 
+
+  const handleRegisterClick = () => {
+    router.push('/registration'); 
+  };
+
     
     const events: Event[] = [
         {
@@ -101,19 +111,6 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
     return <div>Event not found</div>;
   }
 
-  // return (
-  //   <div className="container mx-auto p-4">
-  //     <h1 className="text-3xl font-bold mb-4">{event.name}</h1>
-  //     {event.description && <p className="text-gray-700">{event.description}</p>}
-  //     <p className="mt-2">Date: {new Date(event.date).toLocaleDateString()}</p>
-  //     <p>Time: {event.time}</p>
-  //     <p>Venue: {event.venue}</p>
-  //     <p>Organizer: {event.organizer}</p>
-  //     <p>Attendees: {event.attendees}</p>
-  //     <Image src={event.imageUrl} alt={event.name} className="w-64 h-64 object-cover rounded-lg mt-4" />
-  //   </div>
-  // );
-
   return (
     <div className="bg-gray-900 text-white min-h-screen flex justify-center items-center">
       <div className="max-w-4xl w-full bg-gray-800 rounded-lg shadow-lg p-6">
@@ -159,34 +156,42 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
           </div>
         </div>
 
-        {/* Registration and Host Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           {/* Registration Section */}
           <div className="bg-gray-700 p-4 rounded-lg">
             <div className='border-white pb-1 border-b-2 '>
-                <h2 className="text-lg font-semibold">Registration</h2>
+              <h2 className="text-lg font-semibold">Registration</h2>
             </div>
-            <p className="text-sm text-gray-400 mt-2">Past Event</p>
-            <p className="text-gray-400 text-sm">This event ended 1,586 days ago.</p>
-            <p className="mt-4">Welcome! To join the event, please register below.</p>
-
-            <div className="mt-4">
-                <div className='flex flex-row items-center pb-1'>
-                <Image
-                    src={event.imageUrl}
-                    alt="Host Avatar"
-                    className="w-5 h-5 rounded-full object-cover mr-3"
-                />
+            {event.status === 'Completed' ? (
+              <>
+                <p className="text-sm text-gray-400 mt-2">Past Event</p>
+                <p className="text-gray-400 text-sm">This event ended 1,586 days ago.</p>
+                <button 
+                  className="mt-4 w-full bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
+                  Completed
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="mt-4">Welcome! To join the event, please register below.</p>
+                <div className="mt-4">
+                  <div className='flex flex-row items-center pb-1'>
+                    <Image
+                      src={event.imageUrl}
+                      alt="Host Avatar"
+                      className="w-5 h-5 rounded-full object-cover mr-3"
+                    />
                     <p className="font-bold">AKASH PATEL</p>
+                  </div>
+                  <p className="text-sm text-gray-400">akashpatel115347@gmail.com</p>
                 </div>
-              <p className="text-sm text-gray-400">akashpatel115347@gmail.com</p>
-            </div>
-
-            <button 
-            // onClick={handleRegisterClick}
-            className="mt-4 w-full bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
-              One-Click Register
-            </button>
+                <button 
+                  onClick={handleRegisterClick}
+                  className="mt-4 w-full bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
+                  One-Click Register
+                </button>
+              </>
+            )}
           </div>
 
           {/* Host Section */}
@@ -194,13 +199,13 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             <h2 className="text-lg font-semibold">Hosts</h2>
             <div className="mt-4">
               <p className="font-bold pb-2">{event.organizer}</p>
-              <div>
+              {/* <div>
                <Image
                     src={event.imageUrl}
                     alt="Host Avatar"
                     className="w-full h-full rounded-lg object-cover mr-3"
                 />
-                </div>
+              </div> */}
             </div>
           </div>
         </div>
