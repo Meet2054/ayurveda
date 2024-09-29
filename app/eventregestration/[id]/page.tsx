@@ -166,10 +166,10 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
               <>
                 <p className="text-sm text-gray-400 mt-2">Past Event</p>
                 <p className="text-gray-400 text-sm">This event ended 1,586 days ago.</p>
-                <button 
+                <div 
                   className="mt-4 w-full bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
                   Completed
-                </button>
+                </div>
               </>
             ) : (
               <>
