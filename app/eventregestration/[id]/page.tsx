@@ -5,18 +5,17 @@ import img1 from '@/public/assets/img1.jpg';
 import Image from 'next/image';
 import { CalendarIcon, VideoCameraIcon } from '@heroicons/react/solid';
 import { useRouter } from 'next/navigation';
-import { events } from '../../components/data';
+import { events } from '@/app/components/data';
 
 
 const EventRegistration = ({ params }: { params: { id: string } }) => {
-  const router = useRouter(); 
+
+  const router = useRouter();
+  const eventId = parseInt(params.id, 10); 
 
   const handleRegisterClick = () => {
-    router.push('/registration'); 
+    router.push(`/registration/${eventId}`);
   };
-
-  // Extract the event ID from the params
-  const eventId = parseInt(params.id, 10);
 
   // Find the event by ID
   const event = events.find(e => e.id === eventId);
@@ -40,7 +39,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             width={800}
             height={400}
           />
-          <div className="absolute top-4 left-4 bg-gray-700 text-white rounded-full px-3 py-1 text-xs font-bold">{new Date(event.date).toLocaleDateString()}</div>
+          <div className="absolute top-4 left-4 bg-gray-700 text-white rounded-full px-3 py-1 text-xs font-bold">{new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' }).format(new Date(event.date))}</div>
         </div>
 
         {/* Event Name and Details */}
@@ -60,7 +59,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             <CalendarIcon className="h-8 w-8 sm:h-10 sm:w-10 bg text-gray-400" />
             </div>
             <div>
-              <p className="text-lg font-bold">{new Date(event.date).toLocaleDateString()}</p>
+              <p className="text-lg font-bold">{new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' }).format(new Date(event.date))}</p>
               <p className="text-gray-400 text-sm">{event.time}</p>
             </div>
             <div className="ml-auto bg-gray-500 rounded-full px-3 py-1  flex justify-between items-center">
@@ -108,8 +107,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             )}
           </div>
 
-          {/* Host Section */}
-          <div className="bg-gray-700 p-4 rounded-lg">
+          {event.status === 'Completed' ? (<div className="bg-gray-700 p-4 rounded-lg">
             <h2 className="text-lg font-semibold">Hosts</h2>
             <div className="mt-4">
               <p className="font-bold pb-2">{event.host}</p>
@@ -122,6 +120,22 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
               </div> */}
             </div>
           </div>
+        ):(
+          <div className="bg-gray-700 p-4 rounded-lg">
+            <h2 className="text-lg font-semibold">Hosts</h2>
+            <p className="text-gray-400">Ticket Price : <span className="text-green-400">{event.ticketPrice}</span></p>
+            <div className="mt-2">
+              <p className="font-bold pb-2">{event.host}</p>
+              {/* <div>
+               <Image
+                    src={event.imageUrl}
+                    alt="Host Avatar"
+                    className="w-full h-full rounded-lg object-cover mr-3"
+                />
+              </div> */}
+            </div>
+          </div>
+        )}         
         </div>
         {/* Event Details and Rules Section */}
         <div className="mt-8 bg-gray-700 p-6 rounded-lg">

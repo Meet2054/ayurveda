@@ -26,6 +26,7 @@ export const events: Event[] = [
       'Attendees must carry identification for event registration.',
     ],
     host: 'Rhythm Jain',
+    ticketPrice: 100,
   },
   {
     id: 2,
@@ -48,6 +49,7 @@ export const events: Event[] = [
       'Be respectful and avoid spamming the chat.',
     ],
     host: 'Cale Moody',
+    ticketPrice: 10,
   },
   {
     id: 3,
@@ -71,6 +73,7 @@ export const events: Event[] = [
       'Recording of workshops without prior approval is prohibited.',
     ],
     host: 'Google Developers Team',
+    ticketPrice: 250,
   },
   {
     id: 4,
@@ -94,6 +97,7 @@ export const events: Event[] = [
       'Sessions will be recorded but can only be accessed by attendees.',
     ],
     host: 'React Community Organizers',
+    ticketPrice: 400,
   },
   {
     id: 5,
@@ -117,6 +121,7 @@ export const events: Event[] = [
       'Respect the presenters and avoid interruptions during presentations.',
     ],
     host: 'JavaScript Enthusiasts Organizers',
+    ticketPrice: 300,
   },
   {
     id: 6,
@@ -140,6 +145,7 @@ export const events: Event[] = [
       'Respect other participants and collaborate in a positive environment.',
     ],
     host: 'Tech Hackers Team',
+    ticketPrice: 450,
   },
   {
     id: 7,
@@ -163,6 +169,7 @@ export const events: Event[] = [
       'Attendees must carry identification for event registration.',
     ],
     host: 'Rhythm Jain',
+    ticketPrice: 500,
   },
   {
     id: 8,
@@ -185,6 +192,7 @@ export const events: Event[] = [
       'Be respectful and avoid spamming the chat.',
     ],
     host: 'Cale Moody',
+    ticketPrice: 450,
   },
   {
     id: 9,
@@ -208,6 +216,7 @@ export const events: Event[] = [
       'Recording of workshops without prior approval is prohibited.',
     ],
     host: 'Google Developers Team',
+    ticketPrice: 150,
   },
   {
     id: 10,
@@ -231,5 +240,6 @@ export const events: Event[] = [
       'Sessions will be recorded but can only be accessed by attendees.',
     ],
     host: 'React Community Organizers',
+    ticketPrice: 1000,
   },
 ];

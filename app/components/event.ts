@@ -13,5 +13,6 @@ export interface Event {
     description?: string; 
     rules?: Array<string>;
     host?: string;
+    ticketPrice?: number;
   }
   
