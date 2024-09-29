@@ -1,12 +1,15 @@
-import Image from 'next/image'
 import React from 'react'
-import img from '@/assets/image.png'
+import img from '@/assets/image.svg'
+
 type Props = {}
 
 const Hero = (props: Props) => {
   return (
-    <div className='w-full h-[90vh] border-2' >
-        <Image src={img} alt="bg" className='w-full h-full' />
+    <div 
+      className='w-full h-[90vh]  bg-cover bg-center' 
+      style={{ backgroundImage: `url(${img.src})` }} // Use img.src for Next.js dynamic imports
+    >
+      {/* Additional content can go here */}
     </div>
   )
 }
