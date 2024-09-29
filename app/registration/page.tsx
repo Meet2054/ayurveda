@@ -33,7 +33,7 @@ const Registration: React.FC = () => {
                 <h1 className="text-4xl font-bold text-center mb-6">Registration</h1>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     {/* Name Field */}
-                    <div className='py-4 '>
+                    <div className='py-3 '>
                         <input
                             type="text"
                             name="name"
@@ -46,7 +46,7 @@ const Registration: React.FC = () => {
                     </div>
 
                     {/* Gender Dropdown Field */}
-                    <div className='py-4'>
+                    <div className='py-3'>
                         <div className="relative">
                             <button
                                 type="button"
@@ -77,7 +77,7 @@ const Registration: React.FC = () => {
                     </div>
 
                     {/* Email Field */}
-                    <div className='py-4'>
+                    <div className='py-3'>
                         <input
                             type="email"
                             name="email"
@@ -90,7 +90,7 @@ const Registration: React.FC = () => {
                     </div>
 
                     {/* Department Field */}
-                    <div className='py-4'>
+                    <div className='py-3'>
                         <input
                             type="text"
                             name="department"
@@ -103,7 +103,7 @@ const Registration: React.FC = () => {
                     </div>
 
                     {/* College Field */}
-                    <div className='py-4'>
+                    <div className='py-3'>
                         <input
                             type="text"
                             name="college"
@@ -118,7 +118,7 @@ const Registration: React.FC = () => {
                     {/* Pay Button */}
                     <button
                         type="submit"
-                        className="mt-4 w-full py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition duration-200"
+                        className="mt-4 w-full py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition duration-200"
                     >
                         Pay Registration Fee
                     </button>

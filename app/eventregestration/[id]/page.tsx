@@ -6,22 +6,20 @@ import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import { CalendarIcon, VideoCameraIcon } from '@heroicons/react/solid';
 import { useRouter } from 'next/navigation';
+import { Event } from '../../components/event';
 
-
-
-
-interface Event {
-  id: number;
-  name: string;
-  date: string;
-  time: string;
-  venue: string;
-  organizer: string;
-  attendees: number;
-  imageUrl: StaticImageData;
-  status: string;
-  description?: string;
-}
+// interface Event {
+//   id: number;
+//   name: string;
+//   date: string;
+//   time: string;
+//   venue: string;
+//   organizer: string;
+//   attendees: number;
+//   imageUrl: StaticImageData;
+//   status: string;
+//   description?: string;
+// }
 
 const EventRegistration = ({ params }: { params: { id: string } }) => {
   const router = useRouter(); 
@@ -167,7 +165,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 <p className="text-sm text-gray-400 mt-2">Past Event</p>
                 <p className="text-gray-400 text-sm">This event ended 1,586 days ago.</p>
                 <div 
-                  className="mt-4 w-full bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
+                  className="mt-4 w-full flex justify-center items-center bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
                   Completed
                 </div>
               </>
