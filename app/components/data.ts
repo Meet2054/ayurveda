@@ -1,6 +1,9 @@
 import { Event } from './event';
-import img1 from '../public/img1.jpg';
+import eventimg from '@/public/assets/event.jpg'
+import image2g from '@/public/assets/img1.jpg'
+
 export const events: Event[] = [
+
     {
       id: 1,
       name: 'Cosmos Mumbai led by Warden Protocol',
@@ -9,7 +12,7 @@ export const events: Event[] = [
       venue: 'Lumos Cowork',
       organizer: 'Cosmoverse Dubai, Rhythm Jain & Warden',
       attendees: 241,
-      imageUrl: img1,
+      imageUrl: eventimg,
       status: 'Completed',
       description: 'A blockchain-focused event on Cosmos technology in Mumbai.',
     },
@@ -21,7 +24,7 @@ export const events: Event[] = [
       venue: 'Virtual',
       organizer: 'Cale Moody',
       attendees: 545,
-      imageUrl: img1,
+      imageUrl: eventimg,
       status: 'Invited',
     },
     {
@@ -32,7 +35,7 @@ export const events: Event[] = [
       venue: 'Google HQ',
       organizer: 'Google Developers',
       attendees: 1021,
-      imageUrl: img1,
+      imageUrl: eventimg,
       status: 'Upcoming',
     },
     {
@@ -43,7 +46,7 @@ export const events: Event[] = [
       venue: 'Virtual',
       organizer: 'React Community',
       attendees: 789,
-      imageUrl: img1,
+      imageUrl: eventimg,
       status: 'Upcoming',
     },
     {
@@ -54,7 +57,7 @@ export const events: Event[] = [
       venue: 'Virtual',
       organizer: 'JavaScript Enthusiasts',
       attendees: 890,
-      imageUrl: img1,
+      imageUrl: eventimg,
       status: 'Completed',
     },
     {
@@ -65,7 +68,7 @@ export const events: Event[] = [
       venue: 'Lumos Cowork',
       organizer: 'Tech Hackers',
       attendees: 620,
-      imageUrl: img1,
+      imageUrl: eventimg,
       status: 'Completed',
     },
 ];
