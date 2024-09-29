@@ -19,21 +19,23 @@ const EventsPage: React.FC = () => {
   const pastEvents = events.filter(event => new Date(event.date) < currentDate);
 
   return (
-    <div className="max-w-4xl bg-blue-300 mx-auto py-8 px-4 md:px-6 flex flex-col ">
+    <div className='bg-gray-700 h-full'>
+
+    <div className="max-w-4xl bg-gray-700 mx-auto py-8 px-4 md:px-6 flex flex-col ">
       <div className="flex items-center justify-between mb-6 md:px-2 ">
-        <h2 className="text-2xl font-semibold ">Events List</h2>
+        <h2 className="text-3xl font-semibold text-white ">Events List</h2>
 
         <div className="flex space-x-4">
           <button
             onClick={() => setFilter('upcoming')}
-            className={`px-4 py-2 rounded-full ${filter === 'upcoming' ? 'bg-gray-700 text-white' : 'bg-gray-200'}`}
-          >
+            className={`px-4 py-2 rounded-full ${filter === 'upcoming' ? 'bg-gray-900 text-white' : 'bg-gray-200'}`}
+            >
             Upcoming
           </button>
           <button
             onClick={() => setFilter('past')}
-            className={`px-4 py-2 rounded-full ${filter === 'past' ? 'bg-gray-700 text-white' : 'bg-gray-200'}`}
-          >
+            className={`px-4 py-2 rounded-full ${filter === 'past' ? 'bg-gray-900 text-white' : 'bg-gray-200'}`}
+            >
             Past
           </button>
         </div>
@@ -43,9 +45,9 @@ const EventsPage: React.FC = () => {
         <div className="flex flex-col justify-center">
           {upcomingEvents.map(event => (
             <div
-              key={event.id}
-              onClick={() => eventHandler(event.id)}  // Pass event ID to eventHandler
-              className="bg-gray-800 text-white p-4 mb-6 rounded-lg mx-2 cursor-pointer"
+            key={event.id}
+            onClick={() => eventHandler(event.id)}  // Pass event ID to eventHandler
+            className="bg-gray-800 text-white p-4 mb-6 rounded-lg mx-2 cursor-pointer"
             >
               <div className="flex justify-between">
                 <div>
@@ -70,9 +72,9 @@ const EventsPage: React.FC = () => {
         <div className="flex flex-col justify-center">
           {pastEvents.map(event => (
             <div
-              key={event.id}
-              className="bg-gray-800 text-white p-4 mb-6 rounded-lg mx-2 cursor-pointer"
-              onClick={() => eventHandler(event.id)}  // Pass event ID to eventHandler
+            key={event.id}
+            className="bg-gray-800 text-white p-4 mb-6 rounded-lg mx-2 cursor-pointer"
+            onClick={() => eventHandler(event.id)}  // Pass event ID to eventHandler
             >
               <div className="flex justify-between">
                 <div>
@@ -91,6 +93,7 @@ const EventsPage: React.FC = () => {
         </div>
       )}
     </div>
+      </div>
   );
 };
 

@@ -11,5 +11,7 @@ export interface Event {
     imageUrl: StaticImageData; 
     status: string;
     description?: string; 
+    rules?: Array<string>;
+    host?: string;
   }
   
