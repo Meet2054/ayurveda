@@ -45,7 +45,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
 
         {/* Event Name and Details */}
         <div className="mt-6 px-4 py-4 bg-gray-700 rounded-lg">
-          <h1 className="text-3xl font-bold">{event.name}</h1>
+          <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">{event.name}</h1>
           <div className="pt-2 flex flex-row items-center ">
             <Image
               src={event.imageUrl}
@@ -112,7 +112,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
           <div className="bg-gray-700 p-4 rounded-lg">
             <h2 className="text-lg font-semibold">Hosts</h2>
             <div className="mt-4">
-              <p className="font-bold pb-2">{event.organizer}</p>
+              <p className="font-bold pb-2">{event.host}</p>
               {/* <div>
                <Image
                     src={event.imageUrl}
@@ -130,14 +130,15 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
 
           {/* Rules and Regulations */}
           <h3 className="text-xl font-semibold mb-2">Rules & Regulations</h3>
-          <ul className="list-disc list-inside space-y-2 text-gray-400">
-            <li>All participants must register prior to the event.</li>
-            <li>Please ensure you are logged into Zoom 10 minutes before the event starts.</li>
-            <li>Dress code is Hawaiian-themed or casual.</li>
-            <li>No disruptive behavior will be tolerated during the event.</li>
-            <li>Recording or distributing event materials is prohibited without permission.</li>
-            <li>All participants must follow the host’s instructions at all times.</li>
-          </ul>
+          {event.rules && event.rules.length > 0 ? (
+            <ul className="list-disc list-inside space-y-2 text-gray-400">
+              {event.rules.map((rule, index) => (
+                <li key={index}>{rule}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-gray-400">No specific rules for this event.</p> // Fallback text if no rules are defined
+          )}
         </div>
       </div>
     </div>
