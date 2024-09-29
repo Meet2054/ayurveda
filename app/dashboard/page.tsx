@@ -3,6 +3,7 @@ import Image from 'next/image';
 import image from './image.png'; 
 import { CardDemo} from "../../components/eventList"
 import Hero from '../components/hero';
+import About from '../components/about';
 type Props = {}
 
 const Page = (props: Props) => {
@@ -11,6 +12,7 @@ const Page = (props: Props) => {
       {/* <InfiniteMovingCardsDemo/> */}
       <Hero/>
       <CardDemo/>
+      <About/>
     </div>
   );
 }

@@ -10,6 +10,7 @@ const Hero = (props: Props) => {
       style={{ backgroundImage: `url(${img.src})` }} // Use img.src for Next.js dynamic imports
     >
       {/* Additional content can go here */}
+      
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { Event } from './event';
-import eventimg from '@/public/assets/event.jpg'
-import image2g from '@/public/assets/img1.jpg'
+import eventimg from '@/assets/event.jpg'
+import image2g from '@/assets/img1.jpg'
 
 export const events: Event[] = [
 
