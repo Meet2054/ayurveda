@@ -1,5 +1,6 @@
 import { Event } from './event';
 import eventimg from '@/assets/event.jpg'
+import eventimg1 from "@/assets/event1.jpeg"
 import image2g from '@/assets/img1.jpg'
 
 export const events: Event[] = [
@@ -36,7 +37,7 @@ export const events: Event[] = [
     venue: 'Virtual',
     organizer: 'Cale Moody',
     attendees: 545,
-    imageUrl: eventimg,
+    imageUrl: eventimg1,
     status: 'Invited',
     description: `An online meetup where the Polygon community gathers to discuss updates, future plans,
                   and partnerships related to the Polygon ecosystem. The call will feature insights 
@@ -83,7 +84,7 @@ export const events: Event[] = [
     venue: 'Virtual',
     organizer: 'React Community',
     attendees: 789,
-    imageUrl: eventimg,
+    imageUrl: eventimg1,
     status: 'Upcoming',
     description: `The React Conference 2024 brings together developers and enthusiasts from all 
                   over the world to discuss the latest updates in React and its ecosystem. 
@@ -107,7 +108,7 @@ export const events: Event[] = [
     venue: 'Virtual',
     organizer: 'JavaScript Enthusiasts',
     attendees: 890,
-    imageUrl: eventimg,
+    imageUrl: eventimg1,
     status: 'Completed',
     description: `JS Conf 2023 focused on the latest trends in JavaScript, including frameworks like 
                   Next.js and Svelte. Attendees had the opportunity to engage in hands-on workshops 

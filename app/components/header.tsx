@@ -1,6 +1,7 @@
 "use client"
+import Image from 'next/image';
 import React, { useState } from 'react';
-
+import logo from '@/assets/parulLogo.png'
 type Props = {}
 
 const Header = (props: Props) => {
@@ -8,15 +9,15 @@ const Header = (props: Props) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full h-[10vh] bg-black flex items-center justify-between px-4 md:px-8 relative">
+    <header className="w-full h-[10vh] bg-white flex items-center justify-between px-4 md:px-8 relative">
       {/* Logo on the left */}
-      <div className="text-white text-xl font-bold">
+      <div className="text-black text-xl font-bold">
         {/* Replace this with an <img> tag if you have a logo image */}
-        Logo
+        <Image src={logo} alt='logo' className=' w-[180px] h-[150px] ' />
       </div>
 
       {/* Centered navigation for web view */}
-      <nav className="hidden md:flex space-x-8 text-white text-lg">
+      <nav className="hidden md:flex space-x-8 text-black text-lg">
         <a href="/" className="hover:text-gray-300">Home</a>
         <a href="/events" className="hover:text-gray-300">Event</a>
       </nav>

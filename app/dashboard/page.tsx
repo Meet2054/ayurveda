@@ -9,7 +9,7 @@ type Props = {}
 
 const Page = (props: Props) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-blue-200">
+    <div className="flex flex-col items-center justify-center min-h-screen ">
       {/* <InfiniteMovingCardsDemo/> */}
       <Hero/>
       <CardDemo/>
