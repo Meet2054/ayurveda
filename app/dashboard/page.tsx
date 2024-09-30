@@ -1,10 +1,8 @@
 import React from 'react';
-import Image from 'next/image'; 
-import image from './image.png'; 
 import { CardDemo} from "../../components/eventList"
-import Hero from '../components/hero';
-import About from '../components/about';
-import Team from '../components/team';
+import Hero from './components/hero';
+import About from './components/about';
+import Team from './components/team';
 type Props = {}
 
 const Page = (props: Props) => {

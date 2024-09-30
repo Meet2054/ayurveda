@@ -14,8 +14,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
   const eventId = parseInt(params.id, 10); 
 
   const handleRegisterClick = () => {
-    // router.push(`/registration/${eventId}`);
-    router.push('registration');
+    router.push(`/registration/${eventId}`);
   };
 
   // Find the event by ID
@@ -40,7 +39,9 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             width={800}
             height={400}
           />
-          <div className="absolute top-4 left-4 bg-gray-700 text-white rounded-full px-3 py-1 text-xs font-bold">{new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' }).format(new Date(event.date))}</div>
+          <div className="absolute top-4 left-4 bg-gray-700 text-white rounded-full px-3 py-1 text-xs font-bold">
+            {new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' }).format(new Date(event.date))}
+          </div>
         </div>
 
         {/* Event Name and Details */}
@@ -63,10 +64,10 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
               <p className="text-lg font-bold">{new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' }).format(new Date(event.date))}</p>
               <p className="text-gray-400 text-sm">{event.time}</p>
             </div>
-            <div className="ml-auto bg-gray-500 rounded-full px-3 py-1  flex justify-between items-center">
+            <button className="ml-auto bg-gray-500 rounded-full px-3 py-1  flex justify-between items-center">
             <VideoCameraIcon className="h-8 w-8 sm:h-10 sm:w-10 mr-4 text-gray-400" />
               <span className="text-lg ">Zoom</span>
-            </div>
+            </button>
           </div>
         </div>
 

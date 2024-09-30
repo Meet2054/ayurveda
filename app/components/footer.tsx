@@ -16,8 +16,8 @@ const Footer = (props: Props) => {
         {/* Quick Links Section */}
         <div className='flex flex-col items-center md:items-start font-bold gap-2 mb-4 md:mb-0'>
           <h1 className='text-lg mb-2'>Quick Links</h1>
-          <p className='hover:text-gray-400 cursor-pointer'>Home</p>
-          <p className='hover:text-gray-400 cursor-pointer'>Event</p>
+          <a href="/dashboard" className='hover:text-gray-400 cursor-pointer'>Home</a>
+          <a href="/events" className='hover:text-gray-400 cursor-pointer'>Events</a>
         </div>
         
         {/* Contact Section */}
@@ -27,7 +27,8 @@ const Footer = (props: Props) => {
             <Mail/> <p>paruluniversity@gmail.com</p>
           </div>
           <div className='flex items-center hover:text-gray-400 cursor-pointer gap-2'>
-            <MapPin/> <p>Post Limda, Waghodia, Gujarat 391760</p>
+            <MapPin/> 
+            <a href="https://www.google.com/maps/search/Parul+University/@22.2860275,73.361445,16.19z?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D">Post Limda, Waghodia, Gujarat 391760</a>
           </div>
           <div className='flex items-center hover:text-gray-400 cursor-pointer gap-2'>
             <Phone/> <p>+91-2668-260201</p>

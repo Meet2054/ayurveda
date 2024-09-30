@@ -7,7 +7,7 @@ const Team = (props: Props) => {
   return (
     <div className='w-full h-auto min-h-[80vh] flex flex-col items-center justify-around text-white py-8'>
       <div className='mb-8 p-2 text-center'>
-        <h1 className='text-5xl font-bold'>Head of Ayurveda Department</h1>
+        <h1 className='text-5xl font-bold text-black'>Head of Ayurveda Department</h1>
       </div>
       
       <div className='flex flex-wrap justify-around gap-8 w-full px-16'>

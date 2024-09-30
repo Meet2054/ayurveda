@@ -1,6 +1,7 @@
 import { Event } from './event';
 import eventimg from '@/assets/event.jpg'
-import eventimg1 from "@/assets/event1.jpeg"
+import eventimg1 from "@/assets/parul.jpg"
+import eventimg2 from "@/assets/event1.jpeg"
 import image2g from '@/assets/img1.jpg'
 
 export const events: Event[] = [
@@ -60,7 +61,7 @@ export const events: Event[] = [
     venue: 'Google HQ',
     organizer: 'Google Developers',
     attendees: 1021,
-    imageUrl: eventimg,
+    imageUrl: eventimg2,
     status: 'Upcoming',
     description: `DevFest is a yearly event for developers to connect and share knowledge, 
                   especially around Google technologies like Android, Firebase, and Cloud. 
@@ -84,7 +85,7 @@ export const events: Event[] = [
     venue: 'Virtual',
     organizer: 'React Community',
     attendees: 789,
-    imageUrl: eventimg1,
+    imageUrl: eventimg,
     status: 'Upcoming',
     description: `The React Conference 2024 brings together developers and enthusiasts from all 
                   over the world to discuss the latest updates in React and its ecosystem. 
@@ -132,7 +133,7 @@ export const events: Event[] = [
     venue: 'Lumos Cowork',
     organizer: 'Tech Hackers',
     attendees: 620,
-    imageUrl: eventimg,
+    imageUrl: eventimg2,
     status: 'Completed',
     description: `Hackathon 2023 gathered talented developers and teams to create innovative projects 
                   in various tech domains. Participants had 48 hours to complete their projects, 
@@ -175,13 +176,13 @@ export const events: Event[] = [
   {
     id: 8,
     name: 'Polygon Community Call',
-    date: '2024-09-30T21:30:00',
+    date: '2024-10-30T21:30:00',
     time: '9:30 PM',
     venue: 'Virtual',
     organizer: 'Cale Moody',
     attendees: 545,
-    imageUrl: eventimg,
-    status: 'Invited',
+    imageUrl: eventimg1,
+    status: 'Upcoming',
     description: `An online meetup where the Polygon community gathers to discuss updates, future plans,
                   and partnerships related to the Polygon ecosystem. The call will feature insights 
                   from key team members and open Q&A sessions with the attendees.`,
@@ -203,7 +204,7 @@ export const events: Event[] = [
     venue: 'Google HQ',
     organizer: 'Google Developers',
     attendees: 1021,
-    imageUrl: eventimg,
+    imageUrl: eventimg2,
     status: 'Upcoming',
     description: `DevFest is a yearly event for developers to connect and share knowledge, 
                   especially around Google technologies like Android, Firebase, and Cloud. 

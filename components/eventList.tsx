@@ -5,11 +5,10 @@ import { events } from "@/app/components/data"; // Import the events data
 import { useRouter } from 'next/navigation';
 
 export function CardDemo() {
-  // Duplicate cards to create seamless transition
-  const cardsToDisplay = [...events, ...events]; // Use the events array
+  const cardsToDisplay = [...events, ...events]; // Duplicate cards to create seamless transition
   const router = useRouter();  // Initialize useRouter
 
-  const eventhandler = ()=>{
+  const eventhandler = () => {
     router.push(`/events`);  // Navigate to dynamic event page
   }
 
@@ -45,18 +44,22 @@ export function CardDemo() {
                 />
                 <div className="flex flex-col">
                   <p className="font-normal text-base text-gray-50 relative z-10">
-                    {event.name} 
+                    {event.organizer} 
                   </p>
                   <p className="text-sm text-gray-400">{event.venue}</p> 
                 </div>
               </div>
               <div className="text content">
-                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                  {event.organizer}
+                {/* Add break-words and whitespace-normal to ensure wrapping */}
+                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10 break-words whitespace-normal">
+                  {event.name}
                 </h1>
-                <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
-                  {event.description} 
-                </p>
+
+                {event.description && (
+                  <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
+                    {event.description} 
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -75,6 +78,11 @@ export function CardDemo() {
           100% {
             transform: translateX(-50%);
           }
+        }
+
+        /* Set a fixed height for the card to avoid shrinking */
+        .card {
+          min-height: 24rem; /* Adjust this value as per your requirement */
         }
       `}</style>
     </div>
