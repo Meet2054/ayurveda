@@ -55,9 +55,9 @@ export function CardDemo() {
                   {event.name}
                 </h1>
 
-                {event.description && (
+                {event.time && (
                   <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
-                    {event.description} 
+                    {event.time} 
                   </p>
                 )}
               </div>
@@ -83,6 +83,7 @@ export function CardDemo() {
         /* Set a fixed height for the card to avoid shrinking */
         .card {
           min-height: 24rem; /* Adjust this value as per your requirement */
+          min-width: 20rem; /* Adjust this value as per your requirement */
         }
       `}</style>
     </div>
