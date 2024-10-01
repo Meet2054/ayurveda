@@ -1,18 +1,22 @@
 import { StaticImageData } from 'next/image';
 
 export interface Event {
-    id: number;
-    name: string;
+    // #region Properties (13)
+
+    attendees: number;
     date: string;
+    description?: string;
+    host?: string;
+    id: number;
+    imageUrl: StaticImageData;
+    name: string;
+    organizer: string;
+    rules?: Array<string>;
+    status: string;
+    ticketPrice?: number;
     time: string;
     venue: string;
-    organizer: string;
-    attendees: number;
-    imageUrl: StaticImageData; 
-    status: string;
-    description?: string; 
-    rules?: Array<string>;
-    host?: string;
-    ticketPrice?: number;
-  }
+
+    // #endregion Properties (13)
+}
   

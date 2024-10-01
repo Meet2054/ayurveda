@@ -9,7 +9,7 @@ const Header = (props: Props) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full h-[10vh] bg-white flex items-center justify-between px-4 md:px-8 relative">
+    <header className="w-full h-[7.5vh] flex items-center justify-between px-4 md:px-8 relative">
       {/* Logo on the left */}
       <div className="text-black text-xl font-bold">
         {/* Replace this with an <img> tag if you have a logo image */}
@@ -17,9 +17,14 @@ const Header = (props: Props) => {
       </div>
 
       {/* Centered navigation for web view */}
-      <nav className="hidden md:flex space-x-8 text-black text-lg">
-        <a href="/" className="hover:text-gray-300">Home</a>
-        <a href="/events" className="hover:text-gray-300">Event</a>
+      <nav className="hidden md:flex space-x-6 text-black text-lg">
+        <div className='bg-gray-600 hover:bg-gray-800 rounded-md py-1 '>
+        <a href="/" className="text-white p-4">Home</a>
+        </div>
+        <div className='bg-gray-600 hover:bg-gray-800 rounded-md py-1 '>
+        <a href="/events" className="text-white p-4">Events</a>
+        </div>
+        
       </nav>
 
       {/* Hamburger menu for mobile view */}
