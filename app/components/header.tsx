@@ -22,7 +22,7 @@ const Header = (props: Props) => {
         <a href="/" className="text-white p-4">Home</a>
         </div>
         <div className='bg-gray-600 hover:bg-gray-800 rounded-md py-1 '>
-        <a href="/events" className="text-white p-4">Events</a>
+        <a href="/eventtypes" className="text-white p-4">Events</a>
         </div>
         
       </nav>
