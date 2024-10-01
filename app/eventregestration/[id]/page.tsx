@@ -24,23 +24,23 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
 
   return (
     <div className="bg-gray-900 text-white min-h-screen flex justify-center items-center">
-      <div className="max-w-4xl w-full bg-gray-800 rounded-lg shadow-lg p-6">
+      <div className="max-w-4xl w-full bg-gray-800 rounded-lg shadow-lg p-6 ">
         
         {/* Image and Event Info Section */}
         
-        <div className="relative bg-gray-700 rounded-lg">
-          <Image
-            src={event.imageUrl} // Using the imported image
-            alt={event.name}
-            className="rounded-lg object-cover w-full h-72"
-            layout="responsive"
-            width={800}
-            height={400}
-          />
-          <div className="absolute top-4 left-4 bg-gray-700 text-white rounded-full px-3 py-1 text-xs font-bold">
-            {new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' }).format(new Date(event.date))}
-          </div>
-        </div>
+        <div className="relative bg-gray-700 rounded-lg w-full h-80"> 
+  <Image
+    src={event.imageUrl}
+    alt={event.name}
+    className="rounded-lg object-cover"
+    layout="fill" // Makes the image fill the parent container
+    objectFit="cover" // Ensures the image covers the box without stretching
+  />
+  <div className="absolute top-4 left-4 bg-gray-700 text-white rounded-full px-3 py-1 text-xs font-bold">
+    {new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' }).format(new Date(event.date))}
+  </div>
+</div>
+
 
         {/* Event Name and Details */}
         <div className="mt-6 px-4 py-4 bg-gray-700 rounded-lg">
