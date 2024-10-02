@@ -1,19 +1,20 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-// import { Event } from './event';
 import { events } from "@/app/components/data"; // Import the events data
 import { useRouter } from 'next/navigation';
 
 interface CardDemoProps {
-  category?: string;  // Explicitly define category type
+  category?: string;  // category is optional
 }
 
 export function CardDemo({ category }: CardDemoProps) {
   const router = useRouter();  // Initialize useRouter
   
-  // Filter events based on the category
-  const filteredEvents = events.filter((event) => event.category === category);
+  // Filter events based on the category if it's provided, otherwise show all events
+  const filteredEvents = category 
+    ? events.filter((event) => event.category === category)
+    : events; // Show all events if no category is provided
 
   const eventhandler = () => {
     router.push(`/events`);  // Navigate to dynamic event page

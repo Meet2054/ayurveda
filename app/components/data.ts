@@ -45,6 +45,8 @@ export const events: Event[] = [
     id: 3,
     name: 'DevFest 2024',
     date: '2024-10-05T10:00:00',
+    category: 'Blockchain', // Added category
+
     time: '10:00 AM',
     venue: 'Google HQ',
     organizer: 'Google Developers',
@@ -69,6 +71,8 @@ export const events: Event[] = [
     id: 4,
     name: 'React Conference',
     date: '2024-10-15T09:00:00',
+    category: 'Blockchain', // Added category
+
     time: '9:00 AM',
     venue: 'Virtual',
     organizer: 'React Community',
@@ -93,6 +97,8 @@ export const events: Event[] = [
     id: 5,
     name: 'JS Conf 2023',
     date: '2023-09-15T09:00:00',
+    category: 'Virtual', // Added category
+
     time: '9:00 AM',
     venue: 'Virtual',
     organizer: 'JavaScript Enthusiasts',
@@ -117,6 +123,8 @@ export const events: Event[] = [
     id: 6,
     name: 'Hackathon 2023',
     date: '2023-08-20T10:00:00',
+    category: 'Virtual', // Added category
+
     time: '10:00 AM',
     venue: 'Lumos Cowork',
     organizer: 'Tech Hackers',
@@ -141,6 +149,8 @@ export const events: Event[] = [
     id: 7,
     name: 'Cosmos Mumbai led by Warden Protocol',
     date: '2024-07-28T14:00:00',
+    category: 'Virtual', // Added category
+
     time: '2:00 PM',
     venue: 'Lumos Cowork',
     organizer: 'Cosmoverse Dubai, Rhythm Jain & Warden',
@@ -165,6 +175,8 @@ export const events: Event[] = [
     id: 8,
     name: 'Polygon Community Call',
     date: '2024-10-30T21:30:00',
+    category: 'Virtual', // Added category
+
     time: '9:30 PM',
     venue: 'Virtual',
     organizer: 'Cale Moody',
@@ -189,6 +201,8 @@ export const events: Event[] = [
     name: 'DevFest 2024',
     date: '2024-10-05T10:00:00',
     time: '10:00 AM',
+    category: 'Blockchain', // Added category
+
     venue: 'Google HQ',
     organizer: 'Google Developers',
     attendees: 1021,
@@ -212,6 +226,8 @@ export const events: Event[] = [
     id: 10,
     name: 'React Conference',
     date: '2024-10-15T09:00:00',
+    category: 'Virtual', // Added category
+
     time: '9:00 AM',
     venue: 'Virtual',
     organizer: 'React Community',
