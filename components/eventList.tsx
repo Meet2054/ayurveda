@@ -1,15 +1,15 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { events } from "@/app/components/data"; // Import the events data
+import { events } from "@/app/components/data"; 
 import { useRouter } from 'next/navigation';
 
 interface CardDemoProps {
-  category?: string;  // category is optional
+  category?: string;  
 }
 
 export function CardDemo({ category }: CardDemoProps) {
-  const router = useRouter();  // Initialize useRouter
+  const router = useRouter(); 
   
   // Filter events based on the category if it's provided, otherwise show all events
   const filteredEvents = category 
@@ -17,11 +17,11 @@ export function CardDemo({ category }: CardDemoProps) {
     : events; // Show all events if no category is provided
 
   const eventhandler = () => {
-    router.push(`/events`);  // Navigate to dynamic event page
+    router.push(`/events`); 
   }
 
   return (
-    <div className="relative overflow-hidden w-full h-[70vh] flex items-center ">
+    <div className="relative overflow-hidden w-full h-[70vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-gray-300 flex items-center ">
       <div
         className={cn(
           "flex space-x-12 py-4 animate-slide whitespace-nowrap "
@@ -47,7 +47,7 @@ export function CardDemo({ category }: CardDemoProps) {
                   height="100"
                   width="100"
                   alt="Avatar"
-                  src={event.imageUrl.src} // Use the event image for avatar
+                  src={event.imageUrl.src}
                   className="h-10 w-10 rounded-full border-2 object-cover"
                 />
                 <div className="flex flex-col">

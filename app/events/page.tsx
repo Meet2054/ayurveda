@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { events } from '../components/data'; 
@@ -27,7 +27,7 @@ const EventsPage: React.FC = () => {
 
   return (
     <div className='bg-gray-700 h-full'>
-      <div className="max-w-4xl bg-gray-700 mx-auto py-8 px-4 md:px-6 flex flex-col ">
+      <div className="max-w-4xl bg-gray-700 mx-auto py-8 px-4 md:px-6 flex flex-col">
         <div className="flex items-center justify-between mb-6 md:px-2 ">
           <h2 className="text-3xl font-bold text-white ">Events</h2>
 
@@ -56,12 +56,15 @@ const EventsPage: React.FC = () => {
                 className="bg-gray-800 text-white p-4 mb-6 rounded-lg mx-2 cursor-pointer"
               >
                 <div className="flex justify-between">
-                  <div>
+                  <div className="flex-1 pr-4">
                     <div className="flex items-center space-x-2 pb-2">
                       <span className="bg-red-500 text-xs px-2 py-1 rounded">{event.status}</span>
                       <span className="text-sm">{event.time}</span>
                     </div>
-                    <h3 className="text-xl font-bold">{event.name}</h3>
+                    <h3 className="text-xl font-bold break-words">
+                      {/* Ensure long names wrap */}
+                      {event.name}
+                    </h3>
                     <p className="text-gray-400">{event.organizer}</p>
                     <p className="text-gray-400">{event.venue}</p>
                     <div className="flex items-center mt-2 space-x-2">
@@ -69,7 +72,11 @@ const EventsPage: React.FC = () => {
                       <span className="text-xs text-gray-300">+{event.attendees}</span>
                     </div>
                   </div>
-                  <Image src={event.imageUrl} alt={event.name} className="w-36 h-36 rounded-lg object-cover mr-1" />
+                  <Image 
+                    src={event.imageUrl} 
+                    alt={event.name} 
+                    className="w-36 h-36 rounded-lg object-cover flex-shrink-0" 
+                  />
                 </div>
               </div>
             ))}
@@ -83,16 +90,22 @@ const EventsPage: React.FC = () => {
                 onClick={() => eventHandler(event.id)}  // Pass event ID to eventHandler
               >
                 <div className="flex justify-between">
-                  <div>
+                  <div className="flex-1 pr-4">
                     <div className="flex items-center space-x-2 pb-2">
                       <span className="bg-red-500 text-xs px-2 py-1 rounded">{event.status}</span>
                       <span className="text-sm">{event.time}</span>
                     </div>
-                    <h3 className="text-xl font-bold">{event.name}</h3>
+                    <h3 className="text-xl font-bold break-words">
+                      {event.name}
+                    </h3>
                     <p className="text-gray-400">{event.organizer}</p>
                     <p className="text-gray-400">{event.venue}</p>
                   </div>
-                  <Image src={event.imageUrl} alt={event.name} className="w-36 h-36 rounded-lg object-cover mr-1" />
+                  <Image 
+                    src={event.imageUrl} 
+                    alt={event.name} 
+                    className="w-36 h-36 rounded-lg object-cover flex-shrink-0" 
+                  />
                 </div>
               </div>
             ))}

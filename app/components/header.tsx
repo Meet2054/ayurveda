@@ -53,16 +53,19 @@ const Header = (props: Props) => {
 
       {/* Mobile Menu Full-Screen Dropdown */}
       {menuOpen && (
-        <nav className="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-8 text-white text-lg z-50">
-          <a href="/" className="hover:text-gray-300">Home</a>
-          <a href="/eventtypes" className="hover:text-gray-300">Event</a>
-          {/* Optionally add a close button */}
-          <button 
-            onClick={() => setMenuOpen(false)}
-            className="absolute top-4 right-4 text-white text-2xl"
-          >
-            &times; {/* Close icon */}
-          </button>
+        <nav className="absolute top-14 right-4 w-auto bg-gray-600 flex flex-col items-center justify-start space-y-2 rounded-lg shadow-lg text-white border-black border-2 text-sm z-50">
+            <a 
+              href="/" 
+              className="w-full p-2 mx-4 flex justify-around border-b-2 border-black rounded-md hover:bg-gray-800 hover:text-white transition-colors"
+            >
+              Home
+            </a>
+            <a 
+              href="/eventtypes" 
+              className="flex justify-around w-full p-2 mx-4 rounded-md border-t-2 border-black hover:bg-gray-800 hover:text-white transition-colors"
+            >
+              Event
+            </a>
         </nav>
       )}
     </header>
