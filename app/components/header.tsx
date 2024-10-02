@@ -9,7 +9,7 @@ const Header = (props: Props) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full h-[7.5vh] flex items-center justify-between px-4 md:px-8 relative">
+    <header className="w-full h-[10vh] flex items-center justify-between px-4 md:px-8 relative ">
       {/* Logo on the left */}
       <div className="text-black text-xl font-bold">
         {/* Replace this with an <img> tag if you have a logo image */}

@@ -13,10 +13,10 @@ export function CardDemo() {
   }
 
   return (
-    <div className="relative overflow-hidden w-full h-[70vh] flex items-center">
+    <div className="relative overflow-hidden w-full h-[70vh] flex items-center ">
       <div
         className={cn(
-          "flex space-x-12 py-4 animate-slide whitespace-nowrap"
+          "flex space-x-12 py-4 animate-slide whitespace-nowrap "
         )}
         style={{ animationDuration: "30s", animationIterationCount: "infinite" }}
         onClick={eventhandler}
@@ -24,16 +24,16 @@ export function CardDemo() {
         {cardsToDisplay.map((event, index) => (
           <div
             key={index}
-            className="inline-block min-w-xs max-w-xs w-full group/card transform transition-transform"
+            className="inline-block min-w-xs max-w-xs w-full  group/card transform transition-transform"
           >
             <div
               className={cn(
-                "cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl backgroundImage flex flex-col justify-between p-4",
+                "cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl backgroundImage flex flex-col  justify-between p-4",
                 "bg-cover"
               )}
               style={{ backgroundImage: `url(${event.imageUrl.src})` }} // Using the imageUrl for background
             >
-              <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
+              <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black "></div>
               <div className="flex flex-row items-center space-x-4 z-10">
                 <Image
                   height="100"
@@ -43,15 +43,15 @@ export function CardDemo() {
                   className="h-10 w-10 rounded-full border-2 object-cover"
                 />
                 <div className="flex flex-col">
-                  <p className="font-normal text-base text-gray-50 relative z-10">
+                  <p className="font-normal text-base text-black relative z-10">
                     {event.organizer} 
                   </p>
-                  <p className="text-sm text-gray-400">{event.venue}</p> 
+                  <p className="text-sm text-gray-900">{event.venue}</p> 
                 </div>
               </div>
               <div className="text content">
                 {/* Add break-words and whitespace-normal to ensure wrapping */}
-                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10 break-words whitespace-normal">
+                <h1 className="font-bold text-xl md:text-2xl text-gray-900 relative z-10 break-words whitespace-normal">
                   {event.name}
                 </h1>
 
