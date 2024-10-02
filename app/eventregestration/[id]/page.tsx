@@ -12,7 +12,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
   const eventId = parseInt(params.id, 10); 
 
   const handleRegisterClick = () => {
-    router.push(`/registration/${eventId}`);
+    router.push(`https://docs.google.com/forms/d/e/1FAIpQLSfY-Kx9cKjoRVVpCLj_e-Ua_bhPFdNmNuWzGfdvxRQhe9_NPA/viewform?fbzx=5079751769266440297`);
   };
 
   // Find the event by ID
