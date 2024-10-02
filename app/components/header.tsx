@@ -13,7 +13,7 @@ const Header = (props: Props) => {
       {/* Logo on the left */}
       <div className="text-black text-xl font-bold">
         {/* Replace this with an <img> tag if you have a logo image */}
-        <Image src={logo} alt='logo' className=' w-[180px] h-[150px] ' />
+        <Image src={logo} alt='logo' className=' w-[230px] h-[220px] ' />
       </div>
 
       {/* Centered navigation for web view */}
@@ -30,7 +30,7 @@ const Header = (props: Props) => {
       {/* Hamburger menu for mobile view */}
       <div className="md:hidden">
         <button 
-          className="text-white focus:outline-none" 
+          className="text-black focus:outline-none" 
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {/* Hamburger Icon */}
@@ -53,9 +53,9 @@ const Header = (props: Props) => {
 
       {/* Mobile Menu Full-Screen Dropdown */}
       {menuOpen && (
-        <nav className="fixed inset-0 bg-green-600 flex flex-col items-center justify-center space-y-8 text-white text-lg z-50">
+        <nav className="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-8 text-white text-lg z-50">
           <a href="/" className="hover:text-gray-300">Home</a>
-          <a href="/events" className="hover:text-gray-300">Event</a>
+          <a href="/eventtypes" className="hover:text-gray-300">Event</a>
           {/* Optionally add a close button */}
           <button 
             onClick={() => setMenuOpen(false)}

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import img from "@/app/dashboard/image.png"
+import img from "@/assets/parulLogo1.png"
 import { MapPin, Mail, Phone } from 'lucide-react';
 
 type Props = {}
@@ -10,7 +10,7 @@ const Footer = (props: Props) => {
     <div className='w-full bg-black text-white flex flex-col md:flex-row justify-between items-center p-4 md:h-[25vh]'>
         {/* Logo Section */}
         <div className='mb-4 md:mb-0'>
-          <Image src={img} alt="logo" className='w-24 h-24' />
+          <Image src={img} alt="logo" className='w-[180px] h-[50px]' />
         </div>
         
         {/* Quick Links Section */}
