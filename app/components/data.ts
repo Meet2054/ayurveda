@@ -3,12 +3,11 @@ import eventimg from '@/assets/event.jpg'
 import eventimg1 from "@/assets/parul.jpg"
 import eventimg2 from "@/assets/event1.jpeg"
 import image2g from '@/assets/img1.jpg'
-
 export const events: Event[] = [
-
   {
     id: 1,
     name: 'Cosmos Mumbai led by Warden Protocol',
+    category: 'Blockchain', // Added category
     date: '2024-07-28T14:00:00',
     time: '2:00 PM',
     venue: 'Lumos Cowork',
@@ -16,16 +15,10 @@ export const events: Event[] = [
     attendees: 241,
     imageUrl: eventimg,
     status: 'Completed',
-    description: `An engaging blockchain event focused on the Cosmos network and its applications. 
-                  Experts from Cosmoverse Dubai and Warden Protocol discussed the latest trends and 
-                  advancements in decentralized technologies, with deep dives into Cosmos SDK and 
-                  Tendermint.`,
+    description: `An engaging blockchain event focused on the Cosmos network and its applications.`,
     rules: [
       'Arrive on time for proper seating arrangements.',
       'Networking sessions are limited to 30 minutes.',
-      'Ensure mobile devices are on silent during presentations.',
-      'Strictly adhere to the event schedule.',
-      'Attendees must carry identification for event registration.',
     ],
     host: 'Rhythm Jain',
     ticketPrice: 100,
@@ -33,6 +26,7 @@ export const events: Event[] = [
   {
     id: 2,
     name: 'Polygon Community Call',
+    category: 'Virtual', // Added category
     date: '2024-09-30T21:30:00',
     time: '9:30 PM',
     venue: 'Virtual',
@@ -40,15 +34,9 @@ export const events: Event[] = [
     attendees: 545,
     imageUrl: eventimg1,
     status: 'Invited',
-    description: `An online meetup where the Polygon community gathers to discuss updates, future plans,
-                  and partnerships related to the Polygon ecosystem. The call will feature insights 
-                  from key team members and open Q&A sessions with the attendees.`,
+    description: `An online meetup where the Polygon community gathers to discuss updates.`,
     rules: [
       'Keep your microphone muted unless invited to speak.',
-      'Participation is by invitation only.',
-      'Questions must be submitted in advance for Q&A.',
-      'Recording of the session is prohibited.',
-      'Be respectful and avoid spamming the chat.',
     ],
     host: 'Cale Moody',
     ticketPrice: 10,

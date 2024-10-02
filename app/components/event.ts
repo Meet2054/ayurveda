@@ -6,6 +6,7 @@ export interface Event {
     attendees: number;
     date: string;
     description?: string;
+    category?: string
     host?: string;
     id: number;
     imageUrl: StaticImageData;

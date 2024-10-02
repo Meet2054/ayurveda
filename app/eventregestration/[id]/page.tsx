@@ -28,7 +28,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
         
         {/* Image and Event Info Section */}
         
-        <div className="relative bg-gray-700 rounded-lg w-full h-80"> 
+        <div className="relative bg-gray-700 rounded-lg w-full h-96"> 
           <Image
             src={event.imageUrl}
             alt={event.name}
