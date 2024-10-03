@@ -1,6 +1,9 @@
-import { Event } from './event';
-import eventimg from '@/assets/event.jpg'
-
+import { Event, Team } from './event';
+import eventimg from '@/assets/event.jpg';
+import president from "@/assets/devanshu_patel.jpeg"
+import vise_president from "@/assets/parul_patel.jpeg"
+import trustee from '@/assets/geetika.jpeg'
+import medical_director from '@/assets/komal.jpeg'
 export const events: Event[] = [
   {
     id: 1,
@@ -106,4 +109,30 @@ export const events: Event[] = [
       'Dr. Manuprasad K S: manuprasad.s86269@paruluniversity.ac.in, Phone: 7204276809.',
     ],
   },
+  
 ];
+
+export const teammember: Team[] = [
+  {
+    id: 1,
+    name: "Dr.Devanshu J Patel",
+    post: "President",
+    image: president,
+  }, 
+  {
+    id: 2,
+    name: "Dr.Parul Patel",
+    post: "Vice President",
+    image: vise_president,
+  },  {
+    id: 3,
+    name: "Dr.Geetika M Patel,",
+    post: "Vice President & Trustee",
+    image: trustee,
+  } , {
+    id: 4,
+    name: "Dr.Komal Patel",
+    post: "Vice President & Medical Director",
+    image: medical_director,
+  } 
+]

@@ -25,3 +25,13 @@ export interface Event {
     // #endregion Properties (13)
 }
   
+
+export interface Team {
+    id: number;
+    name: string,
+    post: string,    
+    image: StaticImageData;
+    
+
+}
+  

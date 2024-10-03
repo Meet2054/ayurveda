@@ -13,7 +13,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
 
   const handleRegisterClick = () => {
     router.push(
-      `https://docs.google.com/forms/d/e/1FAIpQLSfY-Kx9cKjoRVVpCLj_e-Ua_bhPFdNmNuWzGfdvxRQhe9_NPA/viewform?fbzx=5079751769266440297`
+      `https://forms.gle/cu7CerYgoFEXoCfu6`
     );
   };
 
