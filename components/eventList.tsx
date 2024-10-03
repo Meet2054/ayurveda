@@ -21,7 +21,7 @@ export function CardDemo({ category }: CardDemoProps) {
   }
 
   return (
-    <div className="relative overflow-hidden w-full h-[55vh] sm:h-[55vh] md:h-[60vh] lg:h-[70vh] bg-gray-300 flex items-center ">
+    <div className="relative overflow-hidden w-full h-[60vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh] bg-gray-300 flex items-center ">
       <div
         className={cn(
           "flex space-x-12 py-4 animate-slide whitespace-nowrap "

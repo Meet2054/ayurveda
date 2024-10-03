@@ -75,7 +75,7 @@ const Header = (props: Props) => {
       {menuOpen && (
         <nav 
           ref={dropdownRef} 
-          className="absolute top-14 right-4 w-auto opacity-90 bg-gray-600 flex flex-col items-center justify-start space-y-2 rounded-lg shadow-lg text-white border-black border-2 text-sm z-50"
+          className="absolute top-14 right-4 w-auto bg-gray-700 flex flex-col items-center justify-start space-y-2 rounded-lg shadow-lg text-white border-black border-2 text-sm z-50"
         >
           <a 
             href="/" 
