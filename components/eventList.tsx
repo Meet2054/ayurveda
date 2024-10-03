@@ -51,9 +51,9 @@ export function CardDemo({ category }: CardDemoProps) {
                   className="h-10 w-10 rounded-full border-2 object-cover"
                 />
                 <div className="flex flex-col">
-                  <p className="font-normal text-base text-black group-hover/card:text-white relative z-10">
-                    {event.organizer} 
-                  </p>
+                <p className="font-normal text-base text-black break-words group-hover/card:text-white relative z-10 whitespace-normal">
+                  {event.organizer}
+                </p>
                   <p className="text-sm text-black group-hover/card:text-gray-800">{event.venue}</p> 
                 </div>
               </div>
@@ -61,12 +61,12 @@ export function CardDemo({ category }: CardDemoProps) {
                 <h1 className="font-bold text-xl md:text-2xl text-gray-900 relative group-hover/card:text-white z-10 break-words whitespace-normal">
                   {event.name}
                 </h1>
-
                 {event.time && (
-                  <p className="font-normal text-sm text-gray-900 group-hover/card:text-white relative z-10 my-4">
-                    {event.time} 
+                  <p className="font-normal text-sm break-words text-gray-900 group-hover/card:text-white relative z-10 my-4 whitespace-normal">
+                    {event.time}
                   </p>
                 )}
+
               </div>
             </div>
           </div>
