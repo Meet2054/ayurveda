@@ -20,7 +20,7 @@ const Hero = (props: Props) => {
         <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-7xl mt-2'>Ayur Vimarsha</h1>
         
         {/* Conference Info */}
-        <div className='w-full bg-white h-8 flex items-center justify-center my-4 sm:my-6 md:my-8 px-2'>
+        <div className='px-8 rounded-xl bg-white h-8 flex items-center justify-center my-4 sm:my-6 md:my-8 px-2'>
           <p className='text-black text-xs sm:text-sm md:text-base'>
             International Conference on "Ayurveda for Everyone, Every Day"
           </p>
