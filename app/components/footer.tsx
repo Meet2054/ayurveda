@@ -17,7 +17,7 @@ const Footer = (props: Props) => {
         <div className='flex flex-col items-center md:items-start font-bold gap-2 mb-4 md:mb-0'>
           <h1 className='text-lg mb-2'>Quick Links</h1>
           <a href="/dashboard" className='hover:text-gray-400 cursor-pointer'>Home</a>
-          <a href="/events" className='hover:text-gray-400 cursor-pointer'>Events</a>
+          <a href="/eventtypes" className='hover:text-gray-400 cursor-pointer'>Events</a>
         </div>
         
         {/* Contact Section */}
