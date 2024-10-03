@@ -17,15 +17,14 @@ export function CardDemo({ category }: CardDemoProps) {
     : events; // Show all events if no category is provided
 
   const eventhandler = () => {
-    router.push(`/events`); 
+    router.push(`/eventregestration/events`); 
   }
 
   // Duplicate the filtered events to create a looping effect
   const duplicatedEvents = [...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents]; 
 
   return (
-    <div className="relative overflow-hidden w-full h-[60vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh] ">
-      <h1 className="text-black text-6xl pl-32  py-4 fa-fontfa-angle-double-down " >EVENTS</h1>
+    <div className="relative overflow-hidden flex items-center w-full h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh] ">
       <div
         className={cn(
           "flex space-x-12 py-4 animate-slide whitespace-nowrap"

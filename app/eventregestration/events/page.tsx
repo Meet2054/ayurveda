@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import { events } from '../components/data'; 
+import { events } from '@/app/components/data'; 
 import Image from 'next/image';
 
 const EventsPage: React.FC = () => {

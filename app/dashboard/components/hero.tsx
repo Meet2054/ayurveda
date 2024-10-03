@@ -11,7 +11,7 @@ const Hero = (props: Props) => {
       className='w-full h-[80vh] sm:h-[90vh] md:h-[100vh] bg-cover bg-center flex flex-col items-center justify-center text-white font-bold relative' 
       style={{ backgroundImage: `url(${img.src})` }}>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50 w-full h-[100vh]"></div>
+      <div className="absolute inset-0 bg-black opacity-50 w-full h-[80vh] sm:h-[90vh] md:h-[100vh]"></div>
       
       {/* Content */}
       <div className='relative z-10 flex flex-col items-center justify-center w-full h-full px-4 text-center'>

@@ -63,7 +63,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             </p>
           </div>
 
-          <div className="flex items-center flex-row justify-between mt-4">
+          <div className="flex items-center justify-between mt-4">
             <div className="flex flex-row">
               <div className="bg-gray-700 rounded-full mr-4 py-2">
                 <CalendarIcon className="h-8 w-8 sm:h-10 sm:w-10 bg text-gray-400" />
@@ -79,22 +79,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 <p className="text-gray-400 text-sm">{event.time}</p>
               </div>
             </div>
-            {event.status === 'Completed' ? (
-              <div className="mt-4 flex justify-center items-center bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
-                Event Completed
-              </div>
-            ) : isRegistrationClosed ? (
-              <a href="/events" className="mt-4 bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
-                Registration Closed
-              </a>
-            ) : (
-              <button
-                onClick={handleRegisterClick}
-                className="mt-4 bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg"
-              >
-                Register
-              </button>
-            )}
+            
           </div>
         </div>
 
@@ -174,6 +159,22 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                   />
               </div>
               <p className="text-green-400 flex justify-center items-center my-2">QR for Payment</p>
+              {event.status === 'Completed' ? (
+              <div className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
+                Event Completed
+              </div>
+            ) : isRegistrationClosed ? (
+              <a href="/eventregestration/events" className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
+                Registration Closed
+              </a>
+            ) : (
+              <button
+                onClick={handleRegisterClick}
+                className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg"
+              >
+                Register
+              </button>
+            )}
             </div>
           )}
         </div>
