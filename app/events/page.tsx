@@ -21,7 +21,17 @@ const EventsPage: React.FC = () => {
       setLoading(false); // Set loading to false after navigation
     }
   };
-  
+
+  // Function to format the date
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat('en-GB', {
+      day: 'numeric',
+      month: 'long', 
+      year: 'numeric',
+    }).format(date);
+  };
+
   const upcomingEvents = events.filter(event => new Date(event.date) >= currentDate);
   const pastEvents = events.filter(event => new Date(event.date) < currentDate);
 
@@ -59,17 +69,15 @@ const EventsPage: React.FC = () => {
                   <div className="flex-1 pr-4">
                     <div className="flex items-center space-x-2 pb-2">
                       <span className="bg-red-500 text-xs px-2 py-1 rounded">{event.status}</span>
-                      <span className="text-sm">{event.time}</span>
+                      <span className="text-sm break-words">{formatDate(event.date)}</span> {/* Format date */}
                     </div>
                     <h3 className="text-xl font-bold break-words">
-                      {/* Ensure long names wrap */}
                       {event.name}
                     </h3>
                     <p className="text-gray-400">{event.organizer}</p>
                     <p className="text-gray-400">{event.venue}</p>
                     <div className="flex items-center mt-2 space-x-2">
                       <span className="text-green-400">Going</span>
-                      <span className="text-xs text-gray-300">+{event.attendees}</span>
                     </div>
                   </div>
                   <Image 
@@ -93,7 +101,7 @@ const EventsPage: React.FC = () => {
                   <div className="flex-1 pr-4">
                     <div className="flex items-center space-x-2 pb-2">
                       <span className="bg-red-500 text-xs px-2 py-1 rounded">{event.status}</span>
-                      <span className="text-sm">{event.time}</span>
+                      <span className="text-sm">{formatDate(event.date)}</span> {/* Format date */}
                     </div>
                     <h3 className="text-xl font-bold break-words">
                       {event.name}

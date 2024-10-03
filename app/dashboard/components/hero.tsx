@@ -8,9 +8,8 @@ type Props = {}
 const Hero = (props: Props) => {
   return (
     <div 
-      className='w-full h-[70vh] sm:h-[100vh] md:h-[100vh] bg-cover bg-center flex flex-col items-center justify-center text-white font-bold relative' 
-      style={{ backgroundImage: `url(${img.src})` }}
-    >
+      className='w-full h-[80vh] sm:h-[90vh] md:h-[100vh] bg-cover bg-center flex flex-col items-center justify-center text-white font-bold relative' 
+      style={{ backgroundImage: `url(${img.src})` }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 w-full h-[100vh]"></div>
       
