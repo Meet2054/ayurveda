@@ -17,7 +17,7 @@ export function CardDemo({ category }: CardDemoProps) {
     : events; // Show all events if no category is provided
 
   const eventhandler = () => {
-    router.push(`/eventregestration/events`); 
+    router.push(`/events`); 
   }
 
   // Duplicate the filtered events to create a looping effect
