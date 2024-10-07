@@ -6,12 +6,12 @@ const Team = (props: Props) => {
   return (
     <div className='w-full h-auto min-h-[80vh] flex flex-col items-center justify-around text-white py-8'>
       <div className='mb-8 p-2 text-center'>
-        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-black animate-float-in'>
+        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-black animate-float-in  ease-in-out'>
           Head of Ayurveda Department
         </h1>
       </div>
 
-      <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-16'>
+      <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-12 '>
         {teammember.map((member) => (
           <div key={member.id} className='flex flex-col items-center gap-4'>
             <div 
@@ -19,7 +19,7 @@ const Team = (props: Props) => {
               style={{ backgroundImage: `url(${member.image.src})` }}
             />
             {/* Responsive Text */}
-            <h1 className='font-bold text-black text-xl sm:text-2xl lg:text-3xl animate-float-in'>
+            <h1 className='font-bold text-black text-xl sm:text-2xl lg:text-3xl '>
               {member.name}
             </h1>
             <p className='text-black text-base sm:text-lg lg:text-xl'>

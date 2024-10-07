@@ -39,7 +39,7 @@ const Header = (props: Props) => {
 
       {/* Centered navigation for web view */}
       <nav className="hidden md:flex space-x-6 text-black text-lg">
-        <div className='text-black py-1 '>
+        <div className='text-black py-1  '>
           <a href="/" className="p-4">Home</a>
         </div>
         <div className=' py-1 '>

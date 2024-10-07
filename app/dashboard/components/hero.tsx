@@ -18,12 +18,12 @@ const Hero = (props: Props) => {
       {/* Content */}
       <div className='relative z-10 flex flex-col items-center justify-center w-full h-full px-4 text-center'>
         {/* Main Title */}
-        <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-5xl'>Ayur Fest,</h1>
-        <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-7xl mt-2'>Ayur Vimarsha</h1>
+        <h1 className='text-3xl animate-bounce sm:text-4xl md:text-5xl lg:text-5xl'>Ayur Fest,</h1>
+        <h1 className='text-5xl animate-pulse sm:text-6xl md:text-7xl lg:text-7xl mt-2'>Ayur Vimarsha</h1>
         
         {/* Conference Info */}
-        <div className='px-8 rounded-xl bg-white h-8 flex items-center justify-center my-4 sm:my-6 md:my-8'>
-          <p className='text-black text-xs sm:text-sm md:text-base'>
+        <div className='px-8 rounded-xl bg-white h-8 flex items-center justify-center my-4 sm:my-6 md:my-8 transition duration-700 ease-in-out'>
+          <p className='text-black text-xs sm:text-sm md:text-base transition duration-700 ease-in-out'>
             International Conference on "Ayurveda for Everyone, Every Day"
           </p>
         </div>
