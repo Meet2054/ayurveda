@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -63,6 +63,24 @@ const config = {
           "0%": { transform: "translateX(-200px)" },
           "100%": { transform: "translateX(200px)" },
         },
+        floatIn: {
+          "0%": { transform: "translateY(-100px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        gridReveal: {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.2)", // Start small
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)", // Full size
+          },
+        },
+        boxReveal: {
+          '0%': { opacity: '0', transform: 'scale(0.5)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -74,12 +92,15 @@ const config = {
       },
       animation: {
         move: "move 5s linear infinite",
+        'float-in': 'floatIn 2s ease-out forwards',
+        'grid-reveal': 'gridReveal 2s ease-in-out forwards', // Grid animation for images
+        'box-reveal': 'boxReveal 0.8s ease-out forwards',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
