@@ -2,6 +2,8 @@ import React from 'react'
 import img from '@/assets/ayu.jpeg'
 import { MapPin } from 'lucide-react'
 import { Quote } from 'lucide-react';
+import ayurveda from '@/assets/ayurveda.png'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -20,7 +22,7 @@ const Hero = (props: Props) => {
         <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-7xl mt-2'>Ayur Vimarsha</h1>
         
         {/* Conference Info */}
-        <div className='px-8 rounded-xl bg-white h-8 flex items-center justify-center my-4 sm:my-6 md:my-8 px-2'>
+        <div className='px-8 rounded-xl bg-white h-8 flex items-center justify-center my-4 sm:my-6 md:my-8'>
           <p className='text-black text-xs sm:text-sm md:text-base'>
             International Conference on "Ayurveda for Everyone, Every Day"
           </p>
@@ -32,13 +34,20 @@ const Hero = (props: Props) => {
         </h1>
         
         {/* Location */}
-        <p className='flex items-center justify-center text-sm sm:text-base md:text-lg pb-4 md:pb-6'>
-          <MapPin className='mr-1' /> Parul University Campus, Vadodara, Gujarat, India
-        </p>
+        <div className='flex items-center justify-center gap-4 '>
+        <MapPin className='' />
+        <a href="https://www.google.com/maps/search/Parul+University/@22.2860275,73.361445,16.19z?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D" 
+                className='flex text-sm sm:text-base md:text-lg'>    
+              Parul University Campus, Vadodara, Gujarat, India    
+        </a>
+        </div>  
         
         {/* Quote Section */}
-        <Quote width={24} height={24} className='sm:w-28 sm:h-28 md:w-34 md:h-34' />
-        <p className='text-base sm:text-lg md:text-xl pt-2 sm:pt-4'>
+        <div className='py-6'>
+          <Image src={ayurveda} alt="logo" className='w-[70px] h-[70px]' />
+        </div>
+
+        <p className='text-base sm:text-lg md:text-xl'>
           “Connecting Tradition with Modernity:
         </p>
         <p className='text-base sm:text-lg md:text-xl'>

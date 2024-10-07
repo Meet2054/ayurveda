@@ -4,6 +4,9 @@ import president from "@/assets/devanshu_patel.jpeg"
 import vise_president from "@/assets/parul_patel.jpeg"
 import trustee from '@/assets/geetika.jpeg'
 import medical_director from '@/assets/komal.jpeg'
+import dean from '@/assets/dean.png'
+import principal from '@/assets/principal.png'
+
 export const events: Event[] = [
   {
     id: 1,
@@ -124,15 +127,29 @@ export const teammember: Team[] = [
     name: "Dr.Parul Patel",
     post: "Vice President",
     image: vise_president,
-  },  {
+  },  
+  {
     id: 3,
     name: "Dr.Geetika M Patel,",
     post: "Vice President & Trustee",
     image: trustee,
-  } , {
+  } , 
+  {
     id: 4,
     name: "Dr.Komal Patel",
     post: "Vice President & Medical Director",
     image: medical_director,
-  } 
+  },
+  {
+    id: 5,
+    name: "Dr.Hemant Thoshikhane",
+    post: "Dean of Ayurveda & Research",
+    image: dean,
+  },
+  {
+    id: 6,
+    name: "Dr.Bhagwan G kulkarni",
+    post: "Principal of Ayurveda & Research",
+    image: principal,
+  },
 ]

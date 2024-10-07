@@ -44,7 +44,7 @@ export function CardDemo({ category }: CardDemoProps) {
               )}
               style={{ backgroundImage: `url(${event.imageUrl.src})` }} // Using the imageUrl for background
             >
-              <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-gray-500 opacity-50 group-hover/card:text-white "></div>
+              <div className="absolute w-full h-full top-0 left-0 transition-all duration-300 ease-in-out group-hover/card:bg-gray-900 opacity-50 group-hover/card:text-white"></div>
               <div className="flex flex-row items-center space-x-4 z-10">
                 <Image
                   height="100"
