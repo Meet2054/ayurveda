@@ -59,6 +59,10 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        slideIn: {
+          '0%': { transform: 'translateX(-100%)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
         move: {
           "0%": { transform: "translateX(-200px)" },
           "100%": { transform: "translateX(200px)" },
@@ -91,6 +95,7 @@ const config = {
         },
       },
       animation: {
+        slideIn: 'slideIn 1s ease-out forwards',
         move: "move 5s linear infinite",
         'float-in': 'floatIn 2s ease-out forwards',
         'grid-reveal': 'gridReveal 2s ease-in-out forwards', // Grid animation for images
