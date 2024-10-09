@@ -21,7 +21,7 @@ export function CardDemo({ category }: CardDemoProps) {
   }
 
   // Duplicate the filtered events to create a looping effect
-  const duplicatedEvents = [...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents]; 
+  const duplicatedEvents = [...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents,...filteredEvents,...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents]; 
 
   return (
     <div className="relative overflow-hidden flex items-center w-full h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh] ">

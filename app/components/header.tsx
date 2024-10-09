@@ -34,7 +34,9 @@ const Header = (props: Props) => {
     <header className="w-full h-[10vh] flex items-center justify-between px-4 md:px-8 relative ">
       {/* Logo on the left */}
       <div className="text-black text-xl font-bold">
-        <Image src={logo} alt='logo' className='w-[230px] h-[220px]' />
+        <a href='/' >
+        <Image src={logo} alt='logo'  className='w-[230px] h-[220px]' />
+        </a>
       </div>
 
       {/* Centered navigation for web view */}
