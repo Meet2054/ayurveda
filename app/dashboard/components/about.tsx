@@ -7,6 +7,7 @@ type Props = {}
 
 const About = (props: Props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false); // State to toggle read more
   const aboutRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -31,6 +32,10 @@ const About = (props: Props) => {
     };
   }, []);
 
+  const toggleReadMore = () => {
+    setIsExpanded(!isExpanded); // Toggle the read more state
+  };
+
   return (
     <div 
       ref={aboutRef}
@@ -42,9 +47,46 @@ const About = (props: Props) => {
       <h1 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-white`}>
         Parul University
       </h1>
-      <p className='w-[90%] sm:w-[70%] md:w-[70%] text-center md:text-center text-sm sm:text-base md:text-xl text-white'>
-        Parul University is a private university in Vadodara, Gujarat, India. Prior to its incorporation as Parul University under the Gujarat Private Universities Act Second Amendment of 2009, the University’s origins trace back to 1993, with the establishment of the Ahmedabad Homeopathic College. Parul University is situated on a 150-acre campus in Vadodara housing over 50,000 students and has a rich history of achievements, including being Gujarat’s first self-financed institute.
+      <p className={`w-[90%] sm:w-[70%] md:w-[70%] rounded-xl text-center md:text-center text-sm sm:text-base md:text-xl text-white ${isExpanded ? '' : 'line-clamp-5'}`}>
+        Parul University is NAAC ++ one among youngest university in Nation.
+        PU is a hub of 34 Institutes offering 250+
+        programs, 150+ acre fully equipped campus
+        nurturing 28000+ students, 900+ International Students
+        from 49+ Countries, 2000+ faculty members & providing
+        in-campus residential facility to 7000+ students and
+        staff making it India's premier multidisciplinary
+        University with Medical, Ayurved, Homeopathy,
+        Paramedical, Pharmacy colleges along with Technical,
+        Engineering and Management Institutes. It has branches in
+        Ahmadabad and Rajkot.
+        Parul University, Faculty of Ayurved has two
+        institutes namely Parul Institute of Ayurved and Parul
+        Institute of Ayurved & Research in its ambit. Both these
+        institutes have their teaching hospitals namely Parul
+        Ayurved Hospital & Khemdas Ayurved Hospital.
+        “Quality is not an act but it is a habit.” These hospitals
+        cater quality healthcare services for poor & needy
+        people of the society which are recognized for their
+        humane services accredited by National Accreditation
+        Board for Hospitals and Healthcare Providers (NABH).
+        “Ananda Bliss” is a super-specialty unit with state of the art Panchkarma facilities.
+        Parul Institute of Ayurved & Parul Institute of Ayurved & Research are
+        approaching forward to achieve the highest rank & set a unique benchmark in
+        teaching methodologies of Ayurved & to set up a platform for UG, PG & PhD.
+        Parul Institute of Ayurved have post graduate courses in 12 disciplines &
+        doctoral programes in all disciplines of Ayurved.Parul Institute of Ayurved
+        is successfully running a G.M.P certified pharmacy which manufactures
+        140+ Ayurvedic formulations.
+        Both the colleges are well connected by road ways, railways and airlines. It
+        is approximately 20-25 km from central bus stand, railway station and airport
+        of Vadodara. 
       </p>
+      <button 
+        className="text-white underline mt-2" 
+        onClick={toggleReadMore}
+      >
+        {isExpanded ? 'Read Less' : 'Read More'}
+      </button>
     </div>
   );
 }
