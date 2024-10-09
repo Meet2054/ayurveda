@@ -1,49 +1,61 @@
 import { StaticImageData } from 'next/image';
 
+// #region Interfaces (4)
+
 export interface Event {
-    // #region Properties (13)
+    // #region Properties (18)
+
+    category?: string
+    contactinfo?: Array<string>;
     // attendees: number;
     date: string;
-    lastDate: string;
     description?: Array<string>;
-    category?: string
     host?: string;
     id: number;
     imageUrl: StaticImageData;
-    paymentQR: StaticImageData;
+    lastDate: string;
     name: string;
     organizer: string;
+    paymentDetails?: Array<string>;
+    paymentQR: StaticImageData;
+    prizes?: Array<string>;
     rules?: Array<string>;
     status: string;
     ticketPrice?: Array<string>;
     time: string;
     venue: string;
-    prizes?: Array<string>;
-    contactinfo?: Array<string>;
-    paymentDetails?: Array<string>;
 
-    // #endregion Properties (13)
+    // #endregion Properties (18)
 }
-  
-export interface Team {
-    id: number;
-    name: string,
-    post: string,    
-    image: StaticImageData;
-    
 
-}
-  
 export interface Head {
-    id: number;
-    name: string,
-    post: string,    
-    image: StaticImageData;
-    
+    // #region Properties (4)
 
+    id: number;
+    image: StaticImageData;
+    name: string,
+    post: string,
+
+    // #endregion Properties (4)
 }
 
 export interface Payment {
+    // #region Properties (1)
+
     paymentDetails?: Array<string>;
+
+    // #endregion Properties (1)
 }
-  
+
+export interface Team {
+    // #region Properties (4)
+
+    id: number;
+    image: StaticImageData;
+    name: string,
+    post: string,
+
+    // #endregion Properties (4)
+}
+
+// #endregion Interfaces (4)
