@@ -124,6 +124,16 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             ) : (
               <p className="text-gray-400">No specific rules for this event.</p>
             )}
+            <h2 className="text-lg mt-6 font-semibold">Prizes and Certification</h2>
+              {event.prizes && event.prizes.length > 0 ? (
+                <ul className="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                  {event.prizes.map((prize, index) => (
+                    <li key={index}>{prize}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-gray-400 mt-2">No specific prizes mentioned for this event.</p>
+              )}
           </div>
 
           {/* Prizes and Certification Section */}
@@ -140,16 +150,6 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 <h2 className="text-lg font-bold mr-2">Hosted By :- </h2>
                 <h2 className="font-semibold text-lg ml-2 ">{event.host}</h2>
               </div>
-              <h2 className="text-lg font-semibold">Prizes and Certification</h2>
-              {event.prizes && event.prizes.length > 0 ? (
-                <ul className="list-disc list-inside space-y-2 text-gray-400 mt-2">
-                  {event.prizes.map((prize, index) => (
-                    <li key={index}>{prize}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-gray-400 mt-2">No specific prizes mentioned for this event.</p>
-              )}
                <h2 className="text-lg mb-2 p-2 font-semibold">Note
                 <p className="text-white border-2 border-white rounded-md p-2">*If you want to register in bulk then contact Dr. Kishan Singh</p>
                 <p className="text-gray-400"> Email: ayurvimarsha@paruluniversity.ac.in </p>
@@ -158,7 +158,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
               <div className='justify-center my-4 items-center'>
               <h2 className="text-lg mb-2 font-semibold">Bank Details</h2>
               {event.paymentDetails && event.paymentDetails.length > 0 ? (
-              <ul className="list-disc list-inside space-y-2 text-gray-400">
+              <ul className="list-disc list-inside space-y-2 text-gray-200">
                 {event.paymentDetails.map((rule, index) => (
                   <li key={index}>{rule}</li>
                 ))}
@@ -166,7 +166,6 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             ) : (
               <p className="text-gray-400">No specific rules for this event.</p>
             )}
-              <p className="text-white text-lg mt-4">Ticket Price : <span className="text-green-400">{event.ticketPrice}</span></p>
               </div>
               {event.status === 'Completed' ? (
               <div className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">

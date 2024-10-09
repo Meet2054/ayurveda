@@ -15,7 +15,7 @@ export interface Event {
     organizer: string;
     rules?: Array<string>;
     status: string;
-    ticketPrice?: string;
+    ticketPrice?: Array<string>;
     time: string;
     venue: string;
     prizes?: Array<string>;

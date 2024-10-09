@@ -46,7 +46,11 @@ export const events: Event[] = [
       'Further instructions regarding the final rounds will be given to the Selected Team of Participants.'
     ],
     host: 'Dr.Hemant Toshikhane',
-    ticketPrice: '99/-Rs, for Per Participants',
+    ticketPrice: [
+      '1st Prize: 3000/- Rs.',
+      '2nd Prize: 2000/- Rs.',
+      '3rd Prize: 1000/- Rs.',
+    ],
     prizes: [
       '1st Prize: 3000/- Rs.',
       '2nd Prize: 2000/- Rs.',
@@ -54,7 +58,7 @@ export const events: Event[] = [
     ],
     contactinfo: [
       'For further details and registration, please contact:',
-      'Dr. Krishna Rathod: ayurvimarsha@paruluniversity.ac.in, Phone: 9480384586.',
+      'Dr. Krishna Rathod: krishna.rathod34716@paruluniversity.ac.in, Phone: 7276763413.',
       'Dr. Manuprasad K S: manuprasad.s86269@paruluniversity.ac.in, Phone: 7204276809.',
     ],
     paymentDetails: [
