@@ -36,8 +36,8 @@ const EventsPage: React.FC = () => {
   const pastEvents = events.filter(event => new Date(event.date) < currentDate);
 
   return (
-    <div className='bg-gray-700 h-full'>
-      <div className="max-w-4xl bg-gray-700 mx-auto py-8 px-4 md:px-6 flex flex-col">
+    <div className='bg-gray-700 h-full min-h-[70vh]  '>
+      <div className="max-w-4xl flex-grow bg-gray-700 mx-auto py-8 px-4 md:px-6 flex flex-col">
         <div className="flex items-center justify-between mb-6 md:px-2 ">
           <h2 className="text-3xl font-bold text-white ">Events</h2>
 
