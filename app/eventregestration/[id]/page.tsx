@@ -124,39 +124,46 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-          <div className="bg-gray-700 p-4 rounded-lg">
+          <div className="bg-gray-700 p-6 rounded-lg">
             <div className="border-white pb-1 border-b-2">
               <h2 className="text-2xl font-semibold mb-1">Contact Information</h2>
             </div>
             {event.contactinfo && event.contactinfo.map((contact, index) => (
-              <div key={index} className="flex items-start flex-col">
-                <span className="font-semibold">{contact.label}:</span>
-                <FaEnvelope className="text-gray-500" />
-                <a href={`mailto:${contact.info}`} className="text-blue-500 underline">
-                  {contact.info}
-                </a>
-                <FaPhone className="ml-4" />
-                <a href={`tel:${contact.phone}`} className="text-blue-500 underline">
-                  {contact.phone}
-                </a>
+              <div key={index} className="flex items-start mt-4 flex-col">
+                <span className="font-semibold -">{contact.label}:</span>
+                <div className='flex flex-row items-center my-1'>
+                  <FaEnvelope className=" mr-4" />
+                  <a href={`mailto:${contact.info}`} className="text-blue-500 underline">
+                    {contact.info}
+                  </a>
+                </div>
+                <div className='flex flex-row my-1 items-center'>
+                  <FaPhone className="mr-4" />
+                  <a href={`tel:${contact.phone}`} className="text-blue-500 underline">
+                    {contact.phone}
+                  </a>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* <div className="bg-gray-700 p-4 rounded-lg">
+          <div className="bg-gray-700 p-6 rounded-lg">
             <div className="border-white pb-1 border-b-2">
-              <h2 className="text-2xl font-semibold mb-1">Contact Info</h2>
+              <h2 className="text-2xl font-semibold mb-1">Hostel Information</h2>
             </div>
-            {event.contactinfo && event.contactinfo.length > 0 ? (
-              <ul className="list-disc list-inside space-y-2 text-gray-400 mt-4">
-                {event.contactinfo.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-gray-400 mt-2 mb-4">No specific contact information for this event.</p>
-            )}
-          </div> */}
+            {event.hostelinfo && event.hostelinfo.map((contact, index) => (
+              <div key={index} className="flex items-start mt-4 flex-col">
+                <span className="font-bold -">{contact.label}:</span>
+                <span className="">{contact.price}:</span>
+                <div className='flex flex-row items-center'>
+                  <FaPhone className="mr-4" />
+                  <a href={`tel:${contact.phone}`} className="text-blue-500 underline">
+                    {contact.phone}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
@@ -223,25 +230,45 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             </div>
           ) : (
             <div className="bg-gray-700 p-4 rounded-lg">
-              <div className="mt-2 flex items-center p-1 mb-2 border-2 rounded-md justify-center border-white flex-row">
+              <div className="mt-2 flex items-center p-1 mb-3 border-2 rounded-md justify-center border-white flex-row">
                 <h2 className="text-lg font-bold mr-2">Hosted By :-</h2>
                 <h2 className="font-semibold text-lg ml-2">{event.host}</h2>
               </div>
-              <h2 className="text-lg mb-2 p-2 font-semibold">
-                Note
-                <p className="text-white border-2 border-white rounded-md p-2">
-                  *If you want to register in bulk then contact Dr. Kishan Singh
+              <h2 className="text-lg mb-2 font-semibold border-2 p-1 px-4 border-white rounded-md">
+                <p className="text-white">
+                  Note :- If you want to register in bulk then contact Dr. Kishan Singh
                 </p>
-                <p className="text-gray-400">
-                  Email: ayurvimarsha@paruluniversity.ac.in
-                </p>
-                <p className="text-gray-400">Phone: 9480384586</p>
+                <div className='flex flex-row items-center my-1'>
+                  <FaEnvelope className=" mr-4" />
+                  <a href={`mailto:${'ayurvimarsha@paruluniversity.ac.in'}`} className="text-blue-500 underline">
+                    {'ayurvimarsha@paruluniversity.ac.in'}
+                  </a>
+                </div>
+                <div className='flex flex-row my-1 items-center'>
+                  <FaPhone className="mr-4" />
+                  <a href={`tel:${'9480384586'}`} className="text-blue-500 underline">
+                    {'9480384586'}
+                  </a>
+                </div>
               </h2>
+
+              <div>
+                <h2 className="text-lg mb-2 font-semibold">Registration Fees</h2>
+                {event.fees && event.fees.length > 0 ? (
+                  <ul className="list-disc list-inside space-y-2 text-gray-300">
+                    {event.fees.map((price, index) => (
+                      <li key={index}>{price}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-400">No specific ticket price for this event.</p>
+                )}
+              </div>
 
               <div className="justify-center my-4 items-center">
                 <h2 className="text-lg mb-2 font-semibold">Bank Details</h2>
                 {event.paymentDetails && event.paymentDetails.length > 0 ? (
-                  <ul className="list-disc list-inside space-y-2 text-gray-200">
+                  <ul className="list-disc list-inside space-y-2 text-gray-300">
                     {event.paymentDetails.map((detail, index) => (
                       <li key={index}>{detail}</li>
                     ))}

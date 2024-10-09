@@ -139,10 +139,6 @@ const Registration = ({ params }: { params: { id: string } }) => {
             />
           </div>
 
-          <div>
-          <p className="text-lg mt-2">Ticket Price : {event.ticketPrice}</p>
-          </div>
-
           {/* Terms and Conditions Checkbox */}
           <div className="py-3">
             <label className="inline-flex items-center">

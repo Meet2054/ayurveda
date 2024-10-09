@@ -7,10 +7,17 @@ export interface ContactInfo {
     phone?: string; 
 }
 
+export interface HostelInfo { 
+    label?: string; 
+    price?: string;
+    phone?: string; 
+}
+
 export interface Event {
 
     category?: string
     contactinfo?: Array<ContactInfo>;
+    hostelinfo?: Array<HostelInfo>;
     // attendees: number;
     date: string;
     description?: Array<string>;
@@ -23,9 +30,9 @@ export interface Event {
     paymentDetails?: Array<string>;
     paymentQR: StaticImageData;
     prizes?: Array<string>;
+    fees?: Array<string>;
     rules?: Array<string>;
     status: string;
-    ticketPrice?: Array<string>;
     time: string;
     venue: string;
 }

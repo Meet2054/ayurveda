@@ -33,18 +33,18 @@ const Header = (props: Props) => {
   return (
     <header className="w-full h-[10vh] flex items-center justify-between px-4 md:px-8 relative ">
       {/* Logo on the left */}
-      <div className="text-black text-xl font-bold h-[80%] w-[27%]">
+      <div className="flex items-center h-[70%] w-[27%]">
         <a href='/' >
         <Image src={logo} alt='logo'  />
         </a>
       </div>
 
       {/* Centered navigation for web view */}
-      <nav className="hidden md:flex space-x-6 text-black text-lg">
-        <div className='text-black py-1  '>
+      <nav className="hidden md:flex space-x-6 text-lg">
+        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white  '>
           <a href="/" className="p-4">Home</a>
         </div>
-        <div className=' py-1 '>
+        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white '>
           <a href="/events" className="text-black p-4">Events</a>
         </div>
       </nav>
@@ -77,7 +77,7 @@ const Header = (props: Props) => {
       {menuOpen && (
         <nav 
           ref={dropdownRef} 
-          className="absolute top-14 right-4 w-auto bg-gray-700 flex flex-col items-center justify-start space-y-2 rounded-lg shadow-lg text-white border-black border-2 text-sm z-50"
+          className="absolute top-10 right-4 w-auto bg-gray-700 flex flex-col items-center justify-start space-y-2 rounded-lg shadow-lg text-white border-black border-2 text-sm z-50"
         >
           <a 
             href="/" 
