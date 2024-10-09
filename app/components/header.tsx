@@ -33,9 +33,9 @@ const Header = (props: Props) => {
   return (
     <header className="w-full h-[10vh] flex items-center justify-between px-4 md:px-8 relative ">
       {/* Logo on the left */}
-      <div className="text-black text-xl font-bold">
+      <div className="text-black text-xl font-bold h-[80%] w-[27%]">
         <a href='/' >
-        <Image src={logo} alt='logo'  className='w-[230px] h-[220px]' />
+        <Image src={logo} alt='logo'  />
         </a>
       </div>
 
