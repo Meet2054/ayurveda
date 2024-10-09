@@ -84,7 +84,7 @@ const Header = (props: Props) => {
             Home
           </a>
           <a 
-            href="/eventtypes" 
+            href="/events" 
             className="flex justify-around w-full p-2 mx-4 rounded-md hover:bg-gray-800 hover:text-white transition-colors"
           >
             Event

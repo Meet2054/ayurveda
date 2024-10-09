@@ -60,8 +60,8 @@ const config = {
       },
       keyframes: {
         slideIn: {
-          '0%': { transform: 'translateX(-100%)', opacity: 0 },
-          '100%': { transform: 'translateX(0)', opacity: 1 },
+          '0%': { transform: "translateX(-100%)", opacity: '0' }, // No quotes around -100%
+          '100%': { transform: "translateX(0)", opacity: '1' },   // No quotes around 0
         },
         move: {
           "0%": { transform: "translateX(-200px)" },
@@ -74,11 +74,11 @@ const config = {
         gridReveal: {
           "0%": {
             opacity: "0",
-            transform: "scale(0.2)", // Start small
+            transform: "scale(0.2)",
           },
           "100%": {
             opacity: "1",
-            transform: "scale(1)", // Full size
+            transform: "scale(1)",
           },
         },
         boxReveal: {
@@ -94,6 +94,7 @@ const config = {
           to: { height: "0" },
         },
       },
+      
       animation: {
         slideIn: 'slideIn 1s ease-out forwards',
         move: "move 5s linear infinite",
