@@ -104,7 +104,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
           )}
 
           {/* Read More/Read Less Button */}
-          {event.description.length > maxVisibleDetails && (
+          {event.description && event.description.length > maxVisibleDetails && (
             <button
               onClick={toggleReadMore}
               className="text-white underline mt-2"
