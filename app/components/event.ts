@@ -2,7 +2,6 @@ import { StaticImageData } from 'next/image';
 
 export interface Event {
     // #region Properties (13)
-
     // attendees: number;
     date: string;
     lastDate: string;
@@ -21,11 +20,11 @@ export interface Event {
     venue: string;
     prizes?: Array<string>;
     contactinfo?: Array<string>;
+    paymentDetails?: Array<string>;
 
     // #endregion Properties (13)
 }
   
-
 export interface Team {
     id: number;
     name: string,
@@ -33,5 +32,18 @@ export interface Team {
     image: StaticImageData;
     
 
+}
+  
+export interface Head {
+    id: number;
+    name: string,
+    post: string,    
+    image: StaticImageData;
+    
+
+}
+
+export interface Payment {
+    paymentDetails?: Array<string>;
 }
   

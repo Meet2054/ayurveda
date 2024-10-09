@@ -1,4 +1,4 @@
-import { Event, Team } from './event';
+import { Event, Team, Head, Payment } from './event';
 import eventimg from '@/assets/event.jpg';
 import president from "@/assets/devanshu_patel.jpeg"
 import vise_president from "@/assets/parul_patel.jpeg"
@@ -54,18 +54,25 @@ export const events: Event[] = [
     ],
     contactinfo: [
       'For further details and registration, please contact:',
-      'Dr. Krishna Rathod: krishna.rathod34716@paruluniversity.ac.in, Phone: 7276763413.',
+      'Dr. Krishna Rathod: ayurvimarsha@paruluniversity.ac.in, Phone: 9480384586.',
       'Dr. Manuprasad K S: manuprasad.s86269@paruluniversity.ac.in, Phone: 7204276809.',
+    ],
+    paymentDetails: [
+      'Bank Name: Central Bank of India',
+      'AC Name: Parul University',
+      'AC Number: 3434915719',
+      'IFSC Code: CBIN0284063',
+      'Branch Name: Parul Institute of Engineering and Technology, Limda, Waghodia, Vadodara, Gujarat 391760',     
     ],
 
   },
   // {
   //   id: 2,
-  //   name: 'AYURVIMARSHA AYURQUIZ 2024',
+  //   name: 'AYURVIMARSHA AYURQUIZ 2025',
   //   category: 'Conference', // Added category
   //   date: '2024-10-24T00:00:00',
   //   time: 'Time Will be announced on the Day of Conference',
-  //   lastDate: '2024-10-02T00:00:00',
+  //   lastDate: '2024-10-24T00:00:00',
   //   venue: 'PIA, Parul University',
   //   organizer: 'Parul Institute of Ayurved, Parul University',
   //   imageUrl: eventimg,
@@ -140,16 +147,31 @@ export const teammember: Team[] = [
     post: "Vice President & Medical Director",
     image: medical_director,
   },
+]
+
+export const depthead: Head[] = [
   {
-    id: 5,
+    id: 1,
     name: "Dr.Hemant Thoshikhane",
-    post: "Dean of Ayurveda & Research",
+    post: "Dean, Faculty of Ayurveda",
     image: dean,
   },
   {
-    id: 6,
+    id: 2,
     name: "Dr.Bhagwan G kulkarni",
     post: "Principal of Ayurveda & Research",
     image: principal,
+  },
+]
+
+export const payment: Payment[] = [
+  {
+    paymentDetails: [
+      'Bank Name: Central Bank of India',
+      'AC Name: Parul University',
+      'AC Number: 3434915719',
+      'IFSC Code: CBIN0284063',
+      'Branch Name: Parul Institute of Engineering and Technology, Limda, Waghodia, Vadodara, Gujarat 391760',     
+    ],
   },
 ]

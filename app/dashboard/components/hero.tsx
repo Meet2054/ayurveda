@@ -25,7 +25,7 @@ const Hero = (props: Props) => {
       {/* Content */}
       <div className='relative z-10 flex flex-col items-center justify-center w-full h-full px-4 text-center'>
         {/* Main Title */}
-        <h1 className='text-3xl content-slide animate-bounce sm:text-4xl md:text-5xl lg:text-5xl'>Ayur Fest,</h1>
+        <h1 className='text-3xl content-slide animate-bounce sm:text-5xl md:text-5xl lg:text-5xl'>Ayur Fest,</h1>
         <h1 className='text-5xl content-slide animate-pulse sm:text-6xl md:text-7xl lg:text-7xl mt-2'>Ayur Vimarsha</h1>
 
         {/* Conference Info */}

@@ -10,15 +10,16 @@ interface CardDemoProps {
 
 export function CardDemo({ category }: CardDemoProps) {
   const router = useRouter(); 
-  
+
   // Filter events based on the category if it's provided, otherwise show all events
   const filteredEvents = category 
     ? events.filter((event) => event.category === category)
     : events; // Show all events if no category is provided
 
-  const eventhandler = () => {
-    router.push(`/events`); 
-  }
+  // Navigate to the registration page with the event ID
+  const eventHandler = (eventId: number) => {
+    router.push(`/eventregestration/${eventId}`);
+  };
 
   // Duplicate the filtered events to create a looping effect
   const duplicatedEvents = [...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents,...filteredEvents,...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents]; 
@@ -30,16 +31,16 @@ export function CardDemo({ category }: CardDemoProps) {
           "flex space-x-12 py-4 animate-slide whitespace-nowrap"
         )}
         style={{ animationDuration: "30s", animationIterationCount: "infinite" }}
-        onClick={eventhandler}
       >
         {duplicatedEvents.map((event, index) => (
           <div
             key={index}
-            className="inline-block min-w-xs max-w-xs w-full group/card transform transition-transform"
+            className="inline-block min-w-xs max-w-xs w-full group/card transform transition-transform cursor-pointer"
+            onClick={() => eventHandler(event.id)} // Pass the event ID to the handler
           >
             <div
               className={cn(
-                "cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl backgroundImage flex flex-col justify-between p-4",
+                "overflow-hidden relative card h-96 rounded-md shadow-xl backgroundImage flex flex-col justify-between p-4",
                 "bg-cover"
               )}
               style={{ backgroundImage: `url(${event.imageUrl.src})` }} // Using the imageUrl for background
@@ -83,11 +84,11 @@ export function CardDemo({ category }: CardDemoProps) {
           0% {
             transform: translateX(0%);
           }
-          50%{
-                      transform: translateX(-20%); /* Move half of the container's width */
+          50% {
+            transform: translateX(-20%);
           }  
           100% {
-            transform: translateX(-50%); /* Move half of the container's width */
+            transform: translateX(-50%);
           }
         }
 
