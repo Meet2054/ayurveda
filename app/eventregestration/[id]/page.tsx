@@ -5,18 +5,27 @@ import Image from 'next/image';
 import { CalendarIcon } from '@heroicons/react/solid';
 import { useRouter } from 'next/navigation';
 import { events } from '@/app/components/data'; // Assuming you're importing event data from a file
+import { FaPhone, FaEnvelope } from 'react-icons/fa'; // Importing the icons
+
+interface Event {
+  contactinfo?: string;
+}
+interface Props {
+  event: Event;
+}
 
 const EventRegistration = ({ params }: { params: { id: string } }) => {
   const [isExpanded, setIsExpanded] = useState(false); // State for toggling 'Read More'
   const router = useRouter();
   const eventId = parseInt(params.id, 10);
-
+  
   const handleRegisterClick = () => {
     router.push(`https://forms.gle/cu7CerYgoFEXoCfu6`);
   };
-
+  
   // Find the event by ID
   const event = events.find((e) => e.id === eventId);
+  const contactinfo = event?.contactinfo ?? 'No contact info available';
 
   if (!event) {
     return <div>Event not found</div>;
@@ -112,74 +121,97 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
               {isExpanded ? 'Read Less' : 'Read More'}
             </button>
           )}
+        </div>
 
-          <div className="border-white mt-4 pb-1 border-b-2">
-            <h2 className="text-2xl font-semibold mb-1">Contact Information</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+          <div className="bg-gray-700 p-4 rounded-lg">
+            <div className="border-white pb-1 border-b-2">
+              <h2 className="text-2xl font-semibold mb-1">Contact Information</h2>
+            </div>
+            {event.contactinfo && event.contactinfo.map((contact, index) => (
+              <div key={index} className="flex items-start flex-col">
+                <span className="font-semibold">{contact.label}:</span>
+                <FaEnvelope className="text-gray-500" />
+                <a href={`mailto:${contact.info}`} className="text-blue-500 underline">
+                  {contact.info}
+                </a>
+                <FaPhone className="ml-4" />
+                <a href={`tel:${contact.phone}`} className="text-blue-500 underline">
+                  {contact.phone}
+                </a>
+              </div>
+            ))}
           </div>
-          {event.contactinfo && event.contactinfo.length > 0 ? (
-            <ul className="list-disc list-inside space-y-2 text-gray-400 mt-4">
-              {event.contactinfo.map((detail, index) => (
-                <li key={index}>{detail}</li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-gray-400 mt-2 mb-4">No specific contact information for this event.</p>
-          )}
+
+          {/* <div className="bg-gray-700 p-4 rounded-lg">
+            <div className="border-white pb-1 border-b-2">
+              <h2 className="text-2xl font-semibold mb-1">Contact Info</h2>
+            </div>
+            {event.contactinfo && event.contactinfo.length > 0 ? (
+              <ul className="list-disc list-inside space-y-2 text-gray-400 mt-4">
+                {event.contactinfo.map((detail, index) => (
+                  <li key={index}>{detail}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-gray-400 mt-2 mb-4">No specific contact information for this event.</p>
+            )}
+          </div> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           {/* Rules & Regulations Section */}
           <div className="bg-gray-700 p-4 rounded-lg">
-  <h3 className="text-xl font-semibold mb-2">Rules & Regulations</h3>
-  {event.rules && event.rules.length > 0 ? (
-    <>
-      <ul className="list-disc list-inside space-y-2 text-gray-400">
-        {event.rules
-          .slice(0, isExpanded ? event.rules.length : maxVisibleDetails)
-          .map((rule, index) => (
-            <li key={index}>{rule}</li>
-          ))}
-      </ul>
+            <h3 className="text-xl font-semibold mb-2">Rules & Regulations</h3>
+            {event.rules && event.rules.length > 0 ? (
+              <>
+                <ul className="list-disc list-inside space-y-2 text-gray-400">
+                  {event.rules
+                    .slice(0, isExpanded ? event.rules.length : maxVisibleDetails)
+                    .map((rule, index) => (
+                      <li key={index}>{rule}</li>
+                    ))}
+                </ul>
 
-      {/* Read More/Read Less Button for Rules */}
-      {event.rules.length > maxVisibleDetails && (
-        <button
-          onClick={toggleReadMore}
-          className="text-white underline mt-2"
-        >
-          {isExpanded ? 'Read Less' : 'Read More'}
-        </button>
-      )}
-    </>
-  ) : (
-    <p className="text-gray-400">No specific rules for this event.</p>
-  )}
+                {/* Read More/Read Less Button for Rules */}
+                {event.rules.length > maxVisibleDetails && (
+                  <button
+                    onClick={toggleReadMore}
+                    className="text-white underline mt-2"
+                  >
+                    {isExpanded ? 'Read Less' : 'Read More'}
+                  </button>
+                )}
+              </>
+            ) : (
+              <p className="text-gray-400">No specific rules for this event.</p>
+            )}
 
-  <h2 className="text-lg mt-6 font-semibold">Prizes and Certification</h2>
-  {event.prizes && event.prizes.length > 0 ? (
-    <>
-      <ul className="list-disc list-inside space-y-2 text-gray-400 mt-2">
-        {event.prizes
-          .slice(0, isExpanded ? event.prizes.length : maxVisibleDetails)
-          .map((prize, index) => (
-            <li key={index}>{prize}</li>
-          ))}
-      </ul>
+            <h2 className="text-lg mt-6 font-semibold">Prizes and Certification</h2>
+            {event.prizes && event.prizes.length > 0 ? (
+              <>
+                <ul className="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                  {event.prizes
+                    .slice(0, isExpanded ? event.prizes.length : maxVisibleDetails)
+                    .map((prize, index) => (
+                      <li key={index}>{prize}</li>
+                    ))}
+                </ul>
 
-      {/* Read More/Read Less Button for Prizes */}
-      {event.prizes.length > maxVisibleDetails && (
-        <button
-          onClick={toggleReadMore}
-          className="text-white underline mt-2"
-        >
-          {isExpanded ? 'Read Less' : 'Read More'}
-        </button>
-      )}
-    </>
-  ) : (
-    <p className="text-gray-400 mt-2">No specific prizes mentioned for this event.</p>
-  )}
-</div>
+                {/* Read More/Read Less Button for Prizes */}
+                {event.prizes.length > maxVisibleDetails && (
+                  <button
+                    onClick={toggleReadMore}
+                    className="text-white underline mt-2"
+                  >
+                    {isExpanded ? 'Read Less' : 'Read More'}
+                  </button>
+                )}
+              </>
+            ) : (
+              <p className="text-gray-400 mt-2">No specific prizes mentioned for this event.</p>
+            )}
+          </div>
 
           {/* Prizes and Certification Section */}
           {event.status === 'Completed' ? (
@@ -232,7 +264,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 </a>
               ) : (
                 <button
-                  className="mt-4 w-full bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg"
+                  className="mt-4 w-full bg-white hover:bg-green-400 text-gray-600 font-bold py-2 px-4 rounded-lg"
                   onClick={handleRegisterClick}
                 >
                   Register

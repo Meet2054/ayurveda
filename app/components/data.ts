@@ -57,9 +57,18 @@ export const events: Event[] = [
       '3rd Prize: 1000/- Rs.',
     ],
     contactinfo: [
-      'For further details and registration, please contact:',
-      'Dr. Krishna Rathod: krishna.rathod34716@paruluniversity.ac.in, Phone: 7276763413.',
-      'Dr. Manuprasad K S: manuprasad.s86269@paruluniversity.ac.in, Phone: 7204276809.',
+      {
+        type: 'email',
+        info: 'ayurvimarsha@paruluniversity.ac.in',
+        label: 'Dr. Krishna Rathod',
+        phone: '9480384586',
+      },
+      {
+        type: 'email',
+        info: 'manuprasad.s86269@paruluniversity.ac.in',
+        label: 'Dr. Manuprasad K S',
+        phone: '7204276809',
+      },
     ],
     paymentDetails: [
       'Bank Name: Central Bank of India',

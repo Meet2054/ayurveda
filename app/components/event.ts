@@ -1,12 +1,16 @@
 import { StaticImageData } from 'next/image';
 
-// #region Interfaces (4)
+export interface ContactInfo {
+    type: string;  
+    info: string; 
+    label?: string; 
+    phone?: string; 
+}
 
 export interface Event {
-    // #region Properties (18)
 
     category?: string
-    contactinfo?: Array<string>;
+    contactinfo?: Array<ContactInfo>;
     // attendees: number;
     date: string;
     description?: Array<string>;
@@ -24,19 +28,14 @@ export interface Event {
     ticketPrice?: Array<string>;
     time: string;
     venue: string;
-
-    // #endregion Properties (18)
 }
 
 export interface Head {
-    // #region Properties (4)
 
     id: number;
     image: StaticImageData;
     name: string,
     post: string,
-
-    // #endregion Properties (4)
 }
 
 export interface Payment {
