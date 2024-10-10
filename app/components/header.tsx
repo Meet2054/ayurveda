@@ -51,6 +51,9 @@ const Header = (props: Props) => {
         <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
           <a href="/events" className="p-4">Events</a>
         </div>
+        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
+          <a href="/templets" className="p-4">Templet</a>
+        </div>
       </nav>
 
       {/* Hamburger menu for mobile view */}
@@ -81,7 +84,7 @@ const Header = (props: Props) => {
       {menuOpen && (
         <nav 
           ref={dropdownRef} 
-          className="absolute top-10 right-4 w-auto bg-gray-700 flex flex-col items-center justify-start space-y-2 rounded-lg shadow-lg text-white border-black border-2 text-sm z-50"
+          className="absolute top-10 right-4 w-auto bg-gray-700 flex flex-col items-center justify-start space-y-2 rounded-lg shadow-lg text-white border-gray-300 border-2 text-sm z-50"
         >
           <a 
             href="/" 
@@ -94,6 +97,12 @@ const Header = (props: Props) => {
             className="flex justify-around w-full p-2 mx-4 rounded-md hover:bg-gray-800 hover:text-white transition-colors"
           >
             Event
+          </a>
+          <a 
+            href="/templets" 
+            className="flex justify-around w-full p-2 mx-4 rounded-md hover:bg-gray-800 hover:text-white transition-colors"
+          >
+            Templet
           </a>
         </nav>
       )}
