@@ -169,7 +169,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           {/* Rules & Regulations Section */}
           <div className="bg-gray-700 p-4 rounded-lg">
-            <h3 className="text-xl font-semibold mb-2">Rules & Regulations</h3>
+            <h3 className="text-xl font-semibold mb-2 underline">Rules & Regulations</h3>
             {event.rules && event.rules.length > 0 ? (
               <>
                 <ul className="list-disc list-inside space-y-2 text-gray-400">
@@ -194,7 +194,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
               <p className="text-gray-400">No specific rules for this event.</p>
             )}
 
-            <h2 className="text-lg mt-6 font-semibold">Prizes and Certification</h2>
+            <h2 className="text-lg mt-6 font-semibold underline">Prizes and Certification</h2>
             {event.prizes && event.prizes.length > 0 ? (
               <>
                 <ul className="list-disc list-inside space-y-2 text-gray-400 mt-2">
@@ -253,7 +253,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
               </h2>
 
               <div>
-                <h2 className="text-lg mb-2 font-semibold">Registration Fees</h2>
+                <h2 className="text-lg mb-2 font-semibold underline">Registration Fees</h2>
                 {event.fees && event.fees.length > 0 ? (
                   <ul className="list-disc list-inside space-y-2 text-gray-300">
                     {event.fees.map((price, index) => (
@@ -266,7 +266,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
               </div>
 
               <div className="justify-center my-4 items-center">
-                <h2 className="text-lg mb-2 font-semibold">Bank Details</h2>
+                <h2 className="text-lg mb-2 font-semibold underline">Bank Details</h2>
                 {event.paymentDetails && event.paymentDetails.length > 0 ? (
                   <ul className="list-disc list-inside space-y-2 text-gray-300">
                     {event.paymentDetails.map((detail, index) => (
@@ -279,19 +279,19 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
               </div>
 
               {event.status === 'Completed' ? (
-                <div className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg">
+                <div className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 text-lg font-semibold py-2 px-4 rounded-lg">
                   Event Completed
                 </div>
               ) : isRegistrationClosed ? (
                 <a
                   href="/eventregestration/events"
-                  className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 font-bold py-2 px-4 rounded-lg"
+                  className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 text-lg font-semibold py-2 px-4 rounded-lg"
                 >
                   Registration Closed
                 </a>
               ) : (
                 <button
-                  className="mt-4 w-full bg-white hover:bg-green-400 text-gray-600 font-bold py-2 px-4 rounded-lg"
+                  className="mt-4 w-full bg-white hover:bg-green-400 text-gray-600 text-lg font-semibold py-2 px-4 rounded-lg"
                   onClick={handleRegisterClick}
                 >
                   Register

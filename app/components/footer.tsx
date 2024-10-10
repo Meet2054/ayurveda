@@ -17,14 +17,14 @@ const Footer = (props: Props) => {
         <div className='flex md:flex-row  gap-2 flex-col md:space-x-16'>
 
          <div className='flex flex-col items-center md:items-start font-semibold gap-2 mb-4 md:mb-0'>
-          <h1 className='text-lg mb-2'>Quick Links</h1>
+          <h1 className='text-lg mb-2 underline'>Quick Links</h1>
           <a href="/dashboard" className='hover:text-gray-400 cursor-pointer'>Home</a>
           <a href="/events" className='hover:text-gray-400 cursor-pointer'>Events</a>
         </div>
         
         {/* Contact Section */}
         <div className='flex flex-col items-center md:items-start gap-2 font-semibold'>
-          <h1 className='text-lg mb-2'>Contact Us</h1>
+          <h1 className='text-lg mb-2 underline'>Contact Us</h1>
           <div className='flex items-center hover:text-gray-400 cursor-pointer gap-2'>
             <Mail/> <p>ayurvimarsha@paruluniversity.ac.in</p>
           </div>

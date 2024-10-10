@@ -31,43 +31,47 @@ const Header = (props: Props) => {
   }, []);
 
   return (
-    <header className="w-full h-[10vh] flex items-center justify-between px-4 md:px-8 relative ">
+    <header className="w-full h-[10vh] flex items-center justify-between px-4 md:px-8 relative">
       {/* Logo on the left */}
-      <div className="flex items-center h-[70%] w-[27%]">
-        <a href='/' >
-        <Image src={logo} alt='logo'  />
+      <div className="flex items-center h-[60%] w-[50%] md:w-[15%] lg:w-[23%]">
+        <a href='/'>
+          <Image 
+            src={logo} 
+            alt='logo' 
+            className="h-full object-contain"
+          />
         </a>
       </div>
 
       {/* Centered navigation for web view */}
       <nav className="hidden md:flex space-x-6 text-lg">
-        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white  '>
+        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
           <a href="/" className="p-4">Home</a>
         </div>
-        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white '>
+        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
           <a href="/events" className="text-black p-4">Events</a>
         </div>
       </nav>
 
       {/* Hamburger menu for mobile view */}
       <div className="md:hidden">
-        <button 
-          className="text-black focus:outline-none" 
+        <button
+          className="text-black focus:outline-none"
           onClick={toggleMenu}
         >
           {/* Hamburger Icon */}
           <svg
-            className="w-8 h-8" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24" 
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth="2" 
-              d="M4 6h16M4 12h16m-7 6h7" 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
             />
           </svg>
         </button>
