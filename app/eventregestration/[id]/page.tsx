@@ -133,13 +133,13 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 <span className="font-semibold -">{contact.label}:</span>
                 <div className='flex flex-row items-center my-1'>
                   <FaEnvelope className=" mr-4" />
-                  <a href={`mailto:${contact.info}`} className="text-blue-500 underline">
+                  <a href={`mailto:${contact.info}`} className="text-green-500 underline">
                     {contact.info}
                   </a>
                 </div>
                 <div className='flex flex-row my-1 items-center'>
                   <FaPhone className="mr-4" />
-                  <a href={`tel:${contact.phone}`} className="text-blue-500 underline">
+                  <a href={`tel:${contact.phone}`} className="text-green-500 underline">
                     {contact.phone}
                   </a>
                 </div>
@@ -157,7 +157,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 <span className="">{contact.price}:</span>
                 <div className='flex flex-row items-center'>
                   <FaPhone className="mr-4" />
-                  <a href={`tel:${contact.phone}`} className="text-blue-500 underline">
+                  <a href={`tel:${contact.phone}`} className="text-green-500 underline">
                     {contact.phone}
                   </a>
                 </div>
@@ -218,15 +218,15 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             ) : (
               <p className="text-gray-400 mt-2">No specific prizes mentioned for this event.</p>
             )}
-            <div className="flex items-center gap-4 pt-8 flex-row">
+            <div className="flex items-center  gap-6 pt-8 flex-row">
           <span className="flex -space-x-4 overflow-hidden ">
             {PEOPLE_URL.map((url, index) => (
               <Image
                 src={url}
                 key={index}
                 alt="person"
-                width={50}
-                height={50}
+                width={52}
+                height={52}
                 className='rounded-full border-2'
               />
             ))}
@@ -257,13 +257,13 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 </p>
                 <div className='flex flex-row items-center my-1'>
                   <FaEnvelope className=" mr-4" />
-                  <a href={`mailto:${'ayurvimarsha@paruluniversity.ac.in'}`} className="text-blue-500 underline">
+                  <a href={`mailto:${'ayurvimarsha@paruluniversity.ac.in'}`} className="text-green-500 underline">
                     {'ayurvimarsha@paruluniversity.ac.in'}
                   </a>
                 </div>
                 <div className='flex flex-row my-1 items-center'>
                   <FaPhone className="mr-4" />
-                  <a href={`tel:${'9480384586'}`} className="text-blue-500 underline">
+                  <a href={`tel:${'9480384586'}`} className="text-green-500 underline">
                     {'9480384586'}
                   </a>
                 </div>
