@@ -6,7 +6,7 @@ import { CalendarIcon } from '@heroicons/react/solid';
 import { useRouter } from 'next/navigation';
 import { events } from '@/app/components/data'; // Assuming you're importing event data from a file
 import { FaPhone, FaEnvelope } from 'react-icons/fa'; // Importing the icons
-
+import { PEOPLE_URL } from '@/app/constants/index'
 interface Event {
   contactinfo?: string;
 }
@@ -218,6 +218,23 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             ) : (
               <p className="text-gray-400 mt-2">No specific prizes mentioned for this event.</p>
             )}
+            <div className="flex items-center  gap-6 pt-8 flex-row">
+          <span className="flex -space-x-4 overflow-hidden ">
+            {PEOPLE_URL.map((url, index) => (
+              <Image
+                src={url}
+                key={index}
+                alt="person"
+                width={50}
+                height={50}
+                className='rounded-full border-2'
+              />
+            ))}
+          </span>
+          <p className='bold-16t md:bold-20 text-white'>7+ Speakers </p>
+          </div>
+
+            
           </div>
 
           {/* Prizes and Certification Section */}
