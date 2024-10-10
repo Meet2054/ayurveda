@@ -218,7 +218,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             ) : (
               <p className="text-gray-400 mt-2">No specific prizes mentioned for this event.</p>
             )}
-            <div className="flex items-center  gap-6 pt-8 flex-row">
+            <div className="flex items-center gap-4 pt-8 flex-row">
           <span className="flex -space-x-4 overflow-hidden ">
             {PEOPLE_URL.map((url, index) => (
               <Image
