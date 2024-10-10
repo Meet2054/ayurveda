@@ -95,7 +95,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
         </div>
 
         {/* Event Details and Rules Section */}
-        <div className="mt-8 bg-gray-700 p-6 rounded-lg">
+        <div className="mt-6 bg-gray-700 p-6 rounded-lg">
           <div className="border-white pb-1 border-b-2">
             <h2 className="text-2xl font-semibold mb-1">Event Details</h2>
           </div>
@@ -123,7 +123,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
           <div className="bg-gray-700 p-6 rounded-lg">
             <div className="border-white pb-1 border-b-2">
               <h2 className="text-2xl font-semibold mb-1">Contact Information</h2>
@@ -166,7 +166,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
           {/* Rules & Regulations Section */}
           <div className="bg-gray-700 p-4 rounded-lg">
             <h3 className="text-xl font-semibold mb-2 underline">Rules & Regulations</h3>

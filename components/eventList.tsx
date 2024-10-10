@@ -25,7 +25,7 @@ export function CardDemo({ category }: CardDemoProps) {
   const duplicatedEvents = [...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents,...filteredEvents,...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents]; 
 
   return (
-    <div className="relative overflow-hidden flex items-center w-full h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh] ">
+    <div className="relative bg-gray-100 overflow-hidden flex items-center w-full h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh] ">
       <div
         className={cn(
           "flex space-x-12 py-4 animate-slide whitespace-nowrap"

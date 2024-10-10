@@ -49,7 +49,7 @@ const Header = (props: Props) => {
           <a href="/" className="p-4">Home</a>
         </div>
         <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
-          <a href="/events" className="text-black p-4">Events</a>
+          <a href="/events" className="p-4">Events</a>
         </div>
       </nav>
 

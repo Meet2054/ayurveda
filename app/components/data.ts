@@ -55,7 +55,7 @@ export const events: Event[] = [
       '500/- Rs. for UG Students',
       '1000/- Rs. for PG Students',
       '2000/- Rs. for Facuilty',
-      'Pay before Registration',
+      'Pay before Registration, because you have to fill your payment details in the registration form.',
     ],
     contactinfo: [
       {
