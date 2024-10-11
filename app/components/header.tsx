@@ -51,13 +51,8 @@ const Header = (props: Props) => {
         <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a href="/events" className="p-4">Events</a>
         </div>
-<<<<<<< HEAD
         <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a href="/templets" className="p-4">Template</a>
-=======
-        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
-          <a href="/template" className="p-4">Template</a>
->>>>>>> d61e7ee43fd8924877a053cec185afa67e3b4e42
         </div>
       </nav>
 
