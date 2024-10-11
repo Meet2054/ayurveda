@@ -44,15 +44,15 @@ const Header = (props: Props) => {
       </div>
 
       {/* Centered navigation for web view */}
-      <nav className="hidden md:flex space-x-6 text-lg">
-        <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black h-full'>
+      <nav className="hidden md:flex space-x-6 text-lg">       
+        <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a href="/" className="p-4 ">Home</a>
         </div>
         <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a href="/events" className="p-4">Events</a>
         </div>
         <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
-          <a href="/templets" className="p-4">Template</a>
+          <a href="/template" className="p-4">Template</a>
         </div>
       </nav>
 

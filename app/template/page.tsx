@@ -44,7 +44,9 @@ export default function TemplatesPage() {
                 objectFit='contain'
               />
             </div>
-            <h2 className="text-2xl text-green-500 bg-white rounded-lg text-center p-2 font-bold mt-4">{template.name}</h2>
+            <div className="text-2xl text-green-500  bg-white rounded-lg text-center p-2 font-bold mt-4">
+            <a href={template.image.src} download >{template.name}</a>
+            </div>
           </div>
         ))}
       </div>
