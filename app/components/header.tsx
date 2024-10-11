@@ -31,9 +31,9 @@ const Header = (props: Props) => {
   }, []);
 
   return (
-    <header className="w-full h-[10vh] flex items-center justify-between px-4 md:px-8 relative">
+    <header className="w-full h-[8vh] flex items-center justify-between px-4 md:px-8 relative">
       {/* Logo on the left */}
-      <div className="flex items-center h-[60%] w-[50%] md:w-[15%] lg:w-[23%]">
+      <div className="flex items-center m-2 h-[60%] w-[50%] md:w-[15%] lg:w-[23%]">
         <a href='/'>
           <Image 
             src={logo} 
@@ -45,13 +45,13 @@ const Header = (props: Props) => {
 
       {/* Centered navigation for web view */}
       <nav className="hidden md:flex space-x-6 text-lg">
-        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
-          <a href="/" className="p-4">Home</a>
+        <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black h-full'>
+          <a href="/" className="p-4 ">Home</a>
         </div>
-        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
+        <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a href="/events" className="p-4">Events</a>
         </div>
-        <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
+        <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a href="/templets" className="p-4">Template</a>
         </div>
       </nav>

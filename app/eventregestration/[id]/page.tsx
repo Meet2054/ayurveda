@@ -6,7 +6,7 @@ import { CalendarIcon } from '@heroicons/react/solid';
 import { useRouter } from 'next/navigation';
 import { events } from '@/app/components/data'; // Assuming you're importing event data from a file
 import { FaPhone, FaEnvelope } from 'react-icons/fa'; // Importing the icons
-import { PEOPLE_URL } from '@/app/constants/index'
+import { PEOPLE_URL } from '@/app/constants/index';
 interface Event {
   contactinfo?: string;
 }
@@ -22,6 +22,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
   const handleRegisterClick = () => {
     router.push(`https://forms.gle/cu7CerYgoFEXoCfu6`);
   };
+ 
   
   // Find the event by ID
   const event = events.find((e) => e.id === eventId);
@@ -60,8 +61,6 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             }).format(new Date(event.date))}
           </div>
         </div>
-
-        {/* Event Name and Details */}
         <div className="mt-6 px-4 py-4 bg-gray-700 rounded-lg">
           <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">{event.name}</h1>
           <div className="pt-2 flex flex-row items-center">
@@ -75,8 +74,8 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
             </p>
           </div>
 
-          <div className="flex items-center justify-between mt-4">
-            <div className="flex flex-row">
+          <div className="flex items-center justify-between mt-4 ">
+            <div className="flex flex-row pr-4">
               <div className="bg-gray-700 rounded-full mr-4 py-2">
                 <CalendarIcon className="h-8 w-8 sm:h-10 sm:w-10 text-gray-400" />
               </div>
@@ -91,8 +90,22 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 <p className="text-gray-400 text-sm">{event.time}</p>
               </div>
             </div>
+
+            {/* Brochure Section */}
+            <div className='' >
+              <a
+                href='/brochure.pdf' 
+                target="_blank"                
+                rel="noopener noreferrer"
+                className=" hover:bg-green-400 text-black bg-white font-bold py-2 px-4 rounded-lg "
+              >
+                Brochure
+              </a>
+            </div>
           </div>
         </div>
+
+
 
         {/* Event Details and Rules Section */}
         <div className="mt-6 bg-gray-700 p-6 rounded-lg">
