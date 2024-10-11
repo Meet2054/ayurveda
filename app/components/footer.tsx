@@ -20,6 +20,7 @@ const Footer = (props: Props) => {
           <h1 className='text-lg mb-2 underline'>Quick Links</h1>
           <a href="/dashboard" className='hover:text-gray-400 cursor-pointer'>Home</a>
           <a href="/events" className='hover:text-gray-400 cursor-pointer'>Events</a>
+          <a href="/template" className='hover:text-gray-400 cursor-pointer'>Template</a>
         </div>
         
         {/* Contact Section */}

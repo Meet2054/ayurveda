@@ -52,7 +52,7 @@ const Header = (props: Props) => {
           <a href="/events" className="p-4">Events</a>
         </div>
         <div className='py-1 hover:bg-gray-600 rounded-lg hover:text-white'>
-          <a href="/templets" className="p-4">Template</a>
+          <a href="/template" className="p-4">Template</a>
         </div>
       </nav>
 
@@ -99,7 +99,7 @@ const Header = (props: Props) => {
             Event
           </a>
           <a 
-            href="/templets" 
+            href="/template" 
             className="flex justify-around w-full p-2 mx-4 rounded-md hover:bg-gray-800 hover:text-white transition-colors"
           >
             Template
