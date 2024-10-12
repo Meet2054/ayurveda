@@ -44,7 +44,7 @@ const Header = (props: Props) => {
       </div>
 
       {/* Centered navigation for web view */}
-      <nav className="hidden md:flex space-x-6 text-lg">       
+      <nav className="hidden md:flex space-x-4 text-lg">       
         <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a href="/" className="p-4 ">Home</a>
         </div>
@@ -53,6 +53,15 @@ const Header = (props: Props) => {
         </div>
         <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a href="/template" className="p-4">Template</a>
+        </div>
+        <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
+          <a 
+          href="@/lib/brochure.pdf" 
+          target="_blank"             
+          rel="noopener noreferrer"
+          className="p-4">
+            Brochure
+          </a>
         </div>
       </nav>
 
@@ -103,6 +112,14 @@ const Header = (props: Props) => {
             className="flex justify-around w-full p-2 mx-4 rounded-md hover:bg-gray-800 hover:text-white transition-colors"
           >
             Template
+          </a>
+          <a 
+            href="@/lib/brochure.pdf" 
+            target="_blank"             
+            rel="noopener noreferrer" 
+            className="flex justify-around w-full p-2 mx-4 rounded-md hover:bg-gray-800 hover:text-white transition-colors"
+          >
+            Brochure
           </a>
         </nav>
       )}

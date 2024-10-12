@@ -48,38 +48,21 @@ const About = (props: Props) => {
         Parul University
       </h1>
       <p className={`w-[90%] sm:w-[70%] md:w-[70%] rounded-xl text-center md:text-center text-sm sm:text-base md:text-xl text-white ${isExpanded ? '' : 'line-clamp-5'}`}>
-        Parul University is NAAC ++ one among youngest university in Nation.
-        PU is a hub of 34 Institutes offering 250+
-        programs, 150+ acre fully equipped campus
-        nurturing 28000+ students, 900+ International Students
-        from 49+ Countries, 2000+ faculty members & providing
-        in-campus residential facility to 7000+ students and
-        staff making it India's premier multidisciplinary
-        University with Medical, Ayurved, Homeopathy,
-        Paramedical, Pharmacy colleges along with Technical,
-        Engineering and Management Institutes. It has branches in
-        Ahmadabad and Rajkot.
-        Parul University, Faculty of Ayurved has two
-        institutes namely Parul Institute of Ayurved and Parul
-        Institute of Ayurved & Research in its ambit. Both these
-        institutes have their teaching hospitals namely Parul
-        Ayurved Hospital & Khemdas Ayurved Hospital.
-        “Quality is not an act but it is a habit.” These hospitals
-        cater quality healthcare services for poor & needy
-        people of the society which are recognized for their
-        humane services accredited by National Accreditation
-        Board for Hospitals and Healthcare Providers (NABH).
-        “Ananda Bliss” is a super-specialty unit with state of the art Panchkarma facilities.
-        Parul Institute of Ayurved & Parul Institute of Ayurved & Research are
-        approaching forward to achieve the highest rank & set a unique benchmark in
-        teaching methodologies of Ayurved & to set up a platform for UG, PG & PhD.
-        Parul Institute of Ayurved have post graduate courses in 12 disciplines &
-        doctoral programes in all disciplines of Ayurved.Parul Institute of Ayurved
-        is successfully running a G.M.P certified pharmacy which manufactures
-        140+ Ayurvedic formulations.
-        Both the colleges are well connected by road ways, railways and airlines. It
-        is approximately 20-25 km from central bus stand, railway station and airport
-        of Vadodara. 
+      Parul University is one of the youngest NAAC ++ accredited universities in the nation. 
+      It is a hub of 34 institutes offering 250+ programs on a 150+ acre campus, nurturing 28,000+ students, 
+      including 900+ international students from 49 countries, with 2,000+ faculty members. 
+      The campus provides residential facilities for 7,000+ students and staff, 
+      making it a premier multidisciplinary university with colleges in medical, 
+      Ayurved, homeopathy, paramedical, pharmacy, engineering, and management fields. 
+      It has branches in Ahmedabad and Rajkot.
+      The Faculty of Ayurved includes Parul Institute of Ayurved and Parul Institute of Ayurved & Research, 
+      both with their own teaching hospitals, Parul Ayurved Hospital and Khemdas Ayurved Hospital, which are NABH accredited. 
+      "Ananda Bliss" is a super-specialty unit offering advanced Panchkarma facilities. 
+      The institutes provide undergraduate, postgraduate, and PhD programs, 
+      including 12 postgraduate disciplines and a GMP-certified pharmacy manufacturing 140+ Ayurvedic formulations.
+      The university's hospitals cater to the poor and needy with quality healthcare services. 
+      The colleges are well connected by road, rail, and air, located 20-25 km from Vadodara's central bus stand, 
+      railway station, and airport. 
       </p>
       <button 
         className="text-white underline mt-2" 

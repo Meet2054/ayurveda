@@ -90,18 +90,6 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 <p className="text-gray-400 text-sm">{event.time}</p>
               </div>
             </div>
-
-            {/* Brochure Section */}
-            <div className='' >
-              <a
-                href='/brochure.pdf' 
-                target="_blank"                
-                rel="noopener noreferrer"
-                className=" hover:bg-green-400 text-black bg-white font-bold py-2 px-4 rounded-lg "
-              >
-                Brochure
-              </a>
-            </div>
           </div>
         </div>
 
@@ -261,7 +249,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
           ) : (
             <div className="bg-gray-700 p-4 rounded-lg">
               <div className="mt-2 flex items-center p-1 mb-3 border-2 rounded-md justify-center border-white flex-row">
-                <h2 className="text-lg font-bold mr-2">Hosted By :-</h2>
+                <h2 className="text-lg font-bold mr-2">Hosted By:-</h2>
                 <h2 className="font-semibold text-lg ml-2">{event.host}</h2>
               </div>
               <h2 className="text-lg mb-2 font-semibold border-2 p-1 px-4 border-white rounded-md">
@@ -271,7 +259,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 <div className='flex flex-row items-center my-1'>
                   <FaEnvelope className=" mr-4" />
                   <a href={`mailto:${'ayurvimarsha@paruluniversity.ac.in'}`} className="text-green-500 underline">
-                    {'ayurvimarsha@paruluniversity.ac.in'}
+                    {'ayurvimarsha@parul university.ac.in'}
                   </a>
                 </div>
                 <div className='flex flex-row my-1 items-center'>

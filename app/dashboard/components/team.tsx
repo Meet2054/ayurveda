@@ -30,13 +30,7 @@ const Team = (props: Props) => {
         ))}
       </div>
 
-      <div className='mb-10 mt-20 p-2 text-center'>
-        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-black animate-float-in ease-in-out'>
-          Head of Ayurveda Department
-        </h1>
-      </div>
-
-      <div className='flex gap-20 w-full px-12 justify-center'>
+      <div className='flex gap-16 w-full px-12 mt-14 justify-center'>
         {depthead.map((head) => (
           <div key={head.id} className='flex flex-col items-center gap-3'>
             <div
