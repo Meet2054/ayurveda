@@ -3,6 +3,7 @@ import { CardDemo} from "../../components/eventList"
 import Hero from './components/hero';
 import About from './components/about';
 import Team from './components/team';
+import Speaker from './components/speaker';
 type Props = {}
 
 const Page = (props: Props) => {
@@ -12,6 +13,7 @@ const Page = (props: Props) => {
       <Hero/>       
       <CardDemo/> 
       <About/>
+      <Speaker/>
       <Team/>
     </div>
   );

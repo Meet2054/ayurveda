@@ -59,6 +59,10 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
         slideIn: {
           '0%': { transform: "translateX(-100%)", opacity: '0' }, // No quotes around -100%
           '100%': { transform: "translateX(0)", opacity: '1' },   // No quotes around 0
@@ -96,6 +100,7 @@ const config = {
       },
       
       animation: {
+        slide: 'slide 10s linear infinite',
         slideIn: 'slideIn 1s ease-out forwards',
         move: "move 5s linear infinite",
         'float-in': 'floatIn 2s ease-out forwards',

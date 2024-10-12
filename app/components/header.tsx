@@ -56,7 +56,7 @@ const Header = (props: Props) => {
         </div>
         <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a 
-          href="@/lib/brochure.pdf" 
+          href="/brochure.pdf" 
           target="_blank"             
           rel="noopener noreferrer"
           className="p-4">
