@@ -1,46 +1,67 @@
+"use client";
 import React from 'react';
-import Image from 'next/image'; 
-import { StaticImageData } from 'next/image';
-// Assuming you're using Next.js Image component
-import devanshuPatelImage from '@/assets/devanshu_patel.jpeg'; // Import the actual image file
 
 type Speaker = {
   id: number;
   name: string;
-  imageUrl: StaticImageData;
+  imageUrl: string;
+  post: string;
 };
 
 const Speaker = () => {
   const speakers: Speaker[] = [
-    { id: 1, name: 'Speaker 1', imageUrl: devanshuPatelImage },
-    { id: 2, name: 'Speaker 2', imageUrl: devanshuPatelImage },
-    { id: 3, name: 'Speaker 3', imageUrl: devanshuPatelImage },
-    // Add more speakers as needed
+    { id: 1, name: 'Dr Narayan Sahane', post: '', imageUrl: '/speakers/speaker1.png' },
+    { id: 2, name: 'Dr. Rajnikant Patel', post: '', imageUrl: '/speakers/speaker2.png' },
+    { id: 3, name: 'Dr Ramdas Avhad', post: '', imageUrl: '/speakers/speaker3.png' },
+    { id: 4, name: 'Vd. Tapan Kumar', post: '', imageUrl: '/speakers/speaker4.png' },
+    { id: 5, name: 'Ashutosh Kulkarni', post: '', imageUrl: '/speakers/speaker5.png' },
+    { id: 6, name: 'P. Hemantha Kumar', post: '', imageUrl: '/speakers/speaker6.png' },
+    { id: 7, name: 'Dr Prasanna Rao', post: '', imageUrl: '/speakers/speaker7.png' },
   ];
 
+  // Duplicate the speaker list to create a continuous looping effect
+  const duplicatedSpeakers = [...speakers, ...speakers,...speakers,...speakers,...speakers]; // Double the array
+
   return (
-    <div className="h-[70vh] w-full border-4 border-black bg-zinc-700 flex flex-col items-center justify-center gap-8 relative">
-      {/* Centered Heading */}
-      <h1 className="text-3xl font-bold absolute top-4 bg-red-200 p-2 rounded-md">Speaker</h1>
-      
-      {/* Speaker Images */}
-      <div className="flex flex-row gap-8 animate-slide mt-16 bg-slate-600 px-4 sm:gap-12 md:gap-16 overflow-x-auto">
-        {speakers.map((speaker) => (
-          <div
-            key={speaker.id}
-            className="flex flex-col items-center bg-gray-200 gap-2 sm:gap-4 min-w-[150px] sm:min-w-[180px] md:min-w-[230px] rounded-xl p-2 sm:p-4"
-          >
-            <Image 
-              src={speaker.imageUrl} 
-              alt={speaker.name} 
-              width={150} 
-              height={150} 
-              className="rounded-full"
+    <div className='w-full h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh] bg-gray-200 overflow-hidden flex flex-col items-center justify-around text-white p-2'>
+      <div className='mb-6 p-2 text-center'>
+        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-black animate-float-in ease-in-out'>
+          Speakers
+        </h1>
+      </div>
+
+      <div className='animate-slide gap-16  w-full px-12'>
+        {speakers.map((member) => (
+          <div key={member.id} className='flex flex-col items-center gap-3'>
+            <div
+              className='md:w-32 md:h-32 w-52 h-52 lg:w-48 lg:h-48 rounded-full bg-cover bg-center'
+              style={{ backgroundImage: `url(${member.imageUrl})`}}
             />
-            <h2 className="text-lg sm:text-xl md:text-2xl pb-2 font-serif">{speaker.name}</h2>
+            {/* Responsive Text */}
+            <h1 className='font-semibold text-black text-xl mt-4 sm:text-2xl lg:text-3xl text-center'>
+              {member.name}
+            </h1>
+            {/* <p className='text-black text-base sm:text-lg lg:text-xl text-center'>
+              {member.post}
+            </p> */}
           </div>
         ))}
       </div>
+
+      <style jsx>{`
+        .animate-slide {
+          display: flex;
+          animation: slide 40s linear infinite;
+        }
+        @keyframes slide {
+          0% {
+            transform: translateX(100%); /* Start from the beginning */
+          }
+          100% {
+            transform: translateX(-100%); /* Move to the end */
+          }
+        }
+      `}</style>
     </div>
   );
 };
