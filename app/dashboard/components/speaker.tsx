@@ -38,7 +38,7 @@ const Speaker = () => {
               style={{ backgroundImage: `url(${member.imageUrl})`}}
             />
             {/* Responsive Text */}
-            <h1 className='font-semibold text-black text-xl mt-4 sm:text-2xl lg:text-3xl text-center'>
+            <h1 className='font-semibold text-black text-lg mt-4 sm:text-xl lg:text-2xl text-center'>
               {member.name}
             </h1>
             {/* <p className='text-black text-base sm:text-lg lg:text-xl text-center'>
