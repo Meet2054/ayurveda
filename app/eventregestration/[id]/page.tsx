@@ -90,6 +90,11 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 <p className="text-gray-400 text-sm">{event.time}</p>
               </div>
             </div>
+            {event.category === "Webinars" && (
+              <div className='px-2 flex items-center justify-center text-center bg-white text-green-400 hover:bg-green-400 rounded-lg hover:text-white'>
+              <a href="/template" className="font-semibold p-2 block w-full text-center">Webinar Flyers</a>
+            </div>
+            )}
           </div>
         </div>
 

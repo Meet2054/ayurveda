@@ -29,7 +29,7 @@ export function CardDemo({ category }: CardDemoProps) {
         className={cn(
           "flex space-x-12 py-4 animate-slide whitespace-nowrap"
         )}
-        style={{ animationDuration: "20s", animationIterationCount: "infinite" }} // Adjust duration as needed
+        style={{ animationDuration: "30s", animationIterationCount: "infinite" }} // Adjust duration as needed
       >
         {duplicatedEvents.map((event, index) => (
           <div
@@ -67,7 +67,7 @@ export function CardDemo({ category }: CardDemoProps) {
                 </h1>
                 {event.time && (
                   <p className="font-normal text-sm break-words text-gray-900 group-hover/card:text-white relative z-10 my-4 whitespace-normal">
-                    {event.time}
+                    {event.category}
                   </p>
                 )}
               </div>

@@ -52,9 +52,6 @@ const Header = (props: Props) => {
           <a href="/events" className="p-4">Events</a>
         </div>
         <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
-          <a href="/template" className="p-4">Template</a>
-        </div>
-        <div className='py-1 hover:bg-gray-200 rounded-full hover:text-black'>
           <a 
           href="/brochure.pdf" 
           target="_blank"             
@@ -106,12 +103,6 @@ const Header = (props: Props) => {
             className="flex justify-around w-full p-2 mx-4 rounded-md hover:bg-gray-800 hover:text-white transition-colors"
           >
             Event
-          </a>
-          <a 
-            href="/template" 
-            className="flex justify-around w-full p-2 mx-4 rounded-md hover:bg-gray-800 hover:text-white transition-colors"
-          >
-            Template
           </a>
           <a 
             href="/brochure.pdf" 

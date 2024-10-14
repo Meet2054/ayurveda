@@ -77,7 +77,7 @@ const EventsPage: React.FC = () => {
                     <p className="text-gray-400">{event.organizer}</p>
                     <p className="text-gray-400">{event.venue}</p>
                     <div className="flex items-center mt-2 space-x-2">
-                      <span className="text-green-400">Going</span>
+                      <span className="text-green-400">{event.category}</span>
                     </div>
                   </div>
                   <Image 
