@@ -27,7 +27,10 @@ const Footer = (props: Props) => {
         <div className='flex flex-col items-center md:items-start gap-2 font-semibold'>
           <h1 className='text-lg mb-2 underline'>Contact Us</h1>
           <div className='flex items-center hover:text-gray-400 cursor-pointer gap-2'>
-            <Mail/> <p>ayurvimarsha@paruluniversity.ac.in</p>
+            <Mail/>
+            <a href={"mailto:${'ayurvimarsha@paruluniversity.ac.in'}"}>
+                    ayurvimarsha@paruluniversity.ac.in
+                  </a>
           </div>
           <div className='flex items-center hover:text-gray-400 cursor-pointer gap-2'>
             <MapPin/> 

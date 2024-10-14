@@ -60,13 +60,13 @@ export const events: Event[] = [
     contactinfo: [
       {
         type: 'email',
-        info: 'krishna.rathod34716@parul university.ac.in ',
+        info: 'krishna.rathod34716@paruluniversity.ac.in',
         label: 'Dr. Krishna Rathod',
         phone: '7276763413',
       },
       {
         type: 'email',
-        info: 'manuprasad.s86269@parul university.ac.in',
+        info: 'manuprasad.s86269@paruluniversity.ac.in',
         label: 'Dr. Manuprasad K S',
         phone: '7204276809',
       },
