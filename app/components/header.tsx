@@ -114,7 +114,7 @@ const Header = (props: Props) => {
             Template
           </a>
           <a 
-            href="@/lib/brochure.pdf" 
+            href="/brochure.pdf" 
             target="_blank"             
             rel="noopener noreferrer" 
             className="flex justify-around w-full p-2 mx-4 rounded-md hover:bg-gray-800 hover:text-white transition-colors"

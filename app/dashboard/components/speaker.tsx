@@ -51,7 +51,7 @@ const Speaker = () => {
       <style jsx>{`
         .animate-slide {
           display: flex;
-          animation: slide 40s linear infinite;
+          animation: slide 10s linear infinite;
         }
         @keyframes slide {
           0% {
