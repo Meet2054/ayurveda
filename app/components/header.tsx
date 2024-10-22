@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useState, useRef, useEffect } from 'react';
-import logo from '@/assets/parulLogo.png';
+import grouplogo from '@/assets/grouplogo.png';
 
 type Props = {};
 
@@ -31,12 +31,12 @@ const Header = (props: Props) => {
   }, []);
 
   return (
-    <header className="w-full h-[8vh] flex items-center justify-between px-4 md:px-8 relative">
+    <header className="w-full h-[6vh] lg:h-[8vh] flex items-center justify-between px-4 md:px-8 relative">
       {/* Logo on the left */}
-      <div className="flex items-center m-2 h-[60%] w-[50%] md:w-[15%] lg:w-[23%]">
+      <div className="flex items-center h-[60%] w-[70%] lg:w-[33%]">
         <a href='/'>
           <Image 
-            src={logo} 
+            src={grouplogo} 
             alt='logo' 
             className="h-full object-contain"
           />
