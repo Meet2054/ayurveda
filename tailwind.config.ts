@@ -97,21 +97,29 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        infiniteXSlide: {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(-100%)',
+          },
+        },
       },
-      
       animation: {
         slide: 'slide 10s linear infinite',
         slideIn: 'slideIn 1s ease-out forwards',
         move: "move 5s linear infinite",
-        'float-in': 'floatIn 2s ease-out forwards',
-        'grid-reveal': 'gridReveal 2s ease-in-out forwards', // Grid animation for images
-        'box-reveal': 'boxReveal 0.8s ease-out forwards',
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        floatIn: 'floatIn 2s ease-out forwards',
+        gridReveal: 'gridReveal 2s ease-in-out forwards', // Grid animation for images
+        boxReveal: 'boxReveal 0.8s ease-out forwards',
+        accordionDown: "accordion-down 0.2s ease-out",
+        accordionUp: "accordion-up 0.2s ease-out",
+        infiniteXSlide: "infiniteXSlide 10s linear infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),],
 } satisfies Config;
 
 export default config;

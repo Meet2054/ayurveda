@@ -21,15 +21,15 @@ export function CardDemo({ category }: CardDemoProps) {
   };
 
   // Duplicate events to achieve infinite scroll effect
-  const duplicatedEvents = [...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents]; // Duplicate only a couple of times
+  const duplicatedEvents = [...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents, ...filteredEvents]; // Duplicate only a couple of times
 
   return (
-    <div className="relative bg-gray-100 overflow-hidden flex items-center w-full h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh]">
+    <div className="relative bg-gray-200 overflow-hidden flex items-center w-full h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh]">
       <div
         className={cn(
-          "flex space-x-12 py-4 animate-slide whitespace-nowrap"
+          "space-x-12 py-4 inline-flex animate-infiniteXSlide"
         )}
-        style={{ animationDuration: "30s", animationIterationCount: "infinite" }} // Adjust duration as needed
+        style={{ animationDuration: "50s", animationIterationCount: "infinite" }} // Adjust duration as needed
       >
         {duplicatedEvents.map((event, index) => (
           <div
@@ -77,18 +77,6 @@ export function CardDemo({ category }: CardDemoProps) {
       </div>
 
       <style jsx>{`
-        .animate-slide {
-          animation: slide 30s linear infinite; /* Set duration as needed */
-        }
-        @keyframes slide {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%); /* Slide enough to scroll through all cards */
-          }
-        }
-
         .card {
           min-height: 24rem;
           min-width: 20rem;

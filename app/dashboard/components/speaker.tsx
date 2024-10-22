@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { cn } from "@/lib/utils";
 
 type Speaker = {
   id: number;
@@ -15,12 +16,25 @@ const Speaker = () => {
     { id: 3, name: 'Dr Ramdas Avhad', post: '', imageUrl: '/speakers/speaker3.png' },
     { id: 4, name: 'Vd. Tapan Kumar', post: '', imageUrl: '/speakers/speaker4.png' },
     { id: 5, name: 'Ashutosh Kulkarni', post: '', imageUrl: '/speakers/speaker5.png' },
-    { id: 6, name: 'P. Hemantha Kumar', post: '', imageUrl: '/speakers/speaker6.png' },
-    { id: 7, name: 'Dr Prasanna Rao', post: '', imageUrl: '/speakers/speaker7.png' },
+    { id: 6, name: 'Dr Prasanna Rao', post: '', imageUrl: '/speakers/speaker7.png' },
+    { id: 7, name: 'Dr Shekhar Annambhotla', post: '', imageUrl: '/speakers/speaker10.png' },
+    { id: 8, name: 'Vd Harish Kumar Verma', post: '', imageUrl: '/speakers/speaker11.png' },
+    { id: 9, name: 'Dr Rajanikant Patel', post: '', imageUrl: '/speakers/speaker12.png' },
+    { id: 10, name: 'Dr P. Hemantha Kumar', post: '', imageUrl: '/speakers/speaker13.png' },
+    { id: 11, name: 'Dr sanjay pokhrel', post: '', imageUrl: '/speakers/speaker14.png' },
+    { id: 12, name: 'Anurag Varshney', post: '', imageUrl: '/speakers/speaker15.png' },
+    { id: 13, name: 'Dr. Abhishek Gupta', post: '', imageUrl: '/speakers/speaker16.png' },
+    { id: 14, name: 'Dr Rohit Sane', post: '', imageUrl: '/speakers/speaker17.png' },
+    { id: 15, name: 'Acharya Manish', post: '', imageUrl: '/speakers/speaker18.png' },
+    { id: 16, name: 'Dr. Pradeep Kumar Sahu', post: '', imageUrl: '/speakers/speaker19.png' },
+    { id: 17, name: 'Dr Suhas Kumar Shetty', post: '', imageUrl: '/speakers/speaker20.png' },
+    { id: 18, name: 'Dr. Raghuram Bhatt', post: '', imageUrl: '/speakers/speaker21.png' },
+    { id: 19, name: 'VAIDYA TAPANKUMAR. M.D.(AYU.)', post: '', imageUrl: '/speakers/speaker22.png' },
+    { id: 20, name: 'Dr Ranjit Singh', post: '', imageUrl: '/speakers/speaker23.png' },
+    { id: 21, name: 'Dr Prasanna Kerur', post: '', imageUrl: '/speakers/speaker8.png' },
+
   ];
 
-  // Duplicate the speaker list to create a continuous looping effect
-  const duplicatedSpeakers = [...speakers, ...speakers,...speakers,...speakers,...speakers]; // Double the array
 
   return (
     <div className='w-full h-[55vh] sm:h-[60vh] md:h-[70vh] lg:h-[70vh] bg-gray-200 overflow-hidden flex flex-col items-center justify-around text-white p-2'>
@@ -30,7 +44,11 @@ const Speaker = () => {
         </h1>
       </div>
 
-      <div className='animate-slide gap-16  w-full px-12'>
+      <div
+      className={cn(
+        "animate-infiniteXSlide inline-flex gap-16  w-full px-12"
+      )}
+      style={{ animationDuration: "20s", animationIterationCount: "infinite" }}>
         {speakers.map((member) => (
           <div key={member.id} className='flex flex-col items-center gap-3'>
             <div
@@ -47,21 +65,6 @@ const Speaker = () => {
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .animate-slide {
-          display: flex;
-          animation: slide 20s linear infinite;
-        }
-        @keyframes slide {
-          0% {
-            transform: translateX(100%); /* Start from the beginning */
-          }
-          100% {
-            transform: translateX(-100%); /* Move to the end */
-          }
-        }
-      `}</style>
     </div>
   );
 };
