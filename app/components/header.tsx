@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useState, useRef, useEffect } from 'react';
-import grouplogo from '@/assets/grouplogo.png';
+import grouplogo from '@/assets/parulLogo.png';
 
 type Props = {};
 

@@ -1,5 +1,11 @@
 import { Event, Team, Head, Payment } from './event';
 import eventimg from '@/assets/event.jpg';
+import EventCover from "@/public/EventCover1.jpg"
+import EventCover2 from "@/public/EventCover2.jpg"
+import EventCover3 from "@/public/EventCover3.jpg"
+import EventCover4 from "@/public/EventCover4.jpg"
+import EventCover5 from "@/public/EventCover5.jpg"
+import EventCover1 from "@/public/EventCover6.jpg"
 import president from "@/assets/devanshu_patel.jpeg"
 import vise_president from "@/assets/parul_patel.jpeg"
 import trustee from '@/assets/geetika.jpeg'
@@ -12,12 +18,12 @@ export const events: Event[] = [
     id: 1,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Main Conference', // Added category
-    date: '2024-10-24T00:00:00',
+    date: '2024-10-26T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
     lastDate: '2024-10-24T00:00:00',
     venue: 'PIA, Parul University',
     organizer: 'Parul Institute of Ayurved, Parul University',
-    imageUrl: eventimg,
+    imageUrl: EventCover,
     paymentQR: eventimg,
     status: 'Upcoming',
     description: [
@@ -26,7 +32,7 @@ export const events: Event[] = [
       'Dates: November 16th & 17th, 2024, Final Round (Offline).',
       'Time: Will be announced on the Day of Conference.',
       'Venue: PIA, Parul University.',
-      'Last Date for Registration: 24/10/2024.',
+      'Last Date for Registration: 26/10/2024',
       'Open to all students (UG, PG, and Interns) of Ayurvedic colleges and institutions across India.',
       'Each college can send a team of students including 2 Participants, 2 Backup Participants & One Mentor.',
       'Multiple entries from one college will be allowed for screening rounds.',
@@ -100,12 +106,12 @@ export const events: Event[] = [
     id: 2,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'AyurQuiz', // Added category
-    date: '2024-10-24T00:00:00',
+    date: '2024-10-26T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
-    lastDate: '2024-10-24T00:00:00',
+    lastDate: '2024-10-26T00:00:00',
     venue: 'PIA, Parul University',
     organizer: 'Parul Institute of Ayurved, Parul University',
-    imageUrl: eventimg,
+    imageUrl: EventCover1,
     paymentQR: eventimg,
     status: 'Upcoming',
     description: [
@@ -114,7 +120,7 @@ export const events: Event[] = [
       'Dates: November 16th & 17th, 2024, Final Round (Offline).',
       'Time: Will be announced on the Day of Conference.',
       'Venue: PIA, Parul University.',
-      'Last Date for Registration: 24/10/2024.',
+      'Last Date for Registration: 26/10/2024',
       'Open to all students (UG, PG, and Interns) of Ayurvedic colleges and institutions across India.',
       'Each college can send a team of students including 2 Participants, 2 Backup Participants & One Mentor.',
       'Multiple entries from one college will be allowed for screening rounds.',
@@ -188,12 +194,12 @@ export const events: Event[] = [
     id: 3,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Webinars', // Added category
-    date: '2024-10-24T00:00:00',
+    date: '2024-10-26T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
-    lastDate: '2024-10-24T00:00:00',
+    lastDate: '2024-10-26T00:00:00',
     venue: 'PIA, Parul University',
     organizer: 'Parul Institute of Ayurved, Parul University',
-    imageUrl: eventimg,
+    imageUrl: EventCover2,
     paymentQR: eventimg,
     status: 'Upcoming',
     description: [
@@ -202,7 +208,7 @@ export const events: Event[] = [
       'Dates: November 16th & 17th, 2024, Final Round (Offline).',
       'Time: Will be announced on the Day of Conference.',
       'Venue: PIA, Parul University.',
-      'Last Date for Registration: 24/10/2024.',
+      'Last Date for Registration: 26/10/2024',
       'Open to all students (UG, PG, and Interns) of Ayurvedic colleges and institutions across India.',
       'Each college can send a team of students including 2 Participants, 2 Backup Participants & One Mentor.',
       'Multiple entries from one college will be allowed for screening rounds.',
@@ -276,12 +282,12 @@ export const events: Event[] = [
     id: 4,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Cultural Events', // Added category
-    date: '2024-10-24T00:00:00',
+    date: '2024-10-26T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
-    lastDate: '2024-10-24T00:00:00',
+    lastDate: '2024-10-26T00:00:00',
     venue: 'PIA, Parul University',
     organizer: 'Parul Institute of Ayurved, Parul University',
-    imageUrl: eventimg,
+    imageUrl: EventCover3,
     paymentQR: eventimg,
     status: 'Upcoming',
     description: [
@@ -290,7 +296,7 @@ export const events: Event[] = [
       'Dates: November 16th & 17th, 2024, Final Round (Offline).',
       'Time: Will be announced on the Day of Conference.',
       'Venue: PIA, Parul University.',
-      'Last Date for Registration: 24/10/2024.',
+      'Last Date for Registration: 26/10/2024',
       'Open to all students (UG, PG, and Interns) of Ayurvedic colleges and institutions across India.',
       'Each college can send a team of students including 2 Participants, 2 Backup Participants & One Mentor.',
       'Multiple entries from one college will be allowed for screening rounds.',
@@ -364,12 +370,12 @@ export const events: Event[] = [
     id: 5,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Conference', // Added category
-    date: '2024-10-24T00:00:00',
+    date: '2024-10-26T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
-    lastDate: '2024-10-24T00:00:00',
+    lastDate: '2024-10-26T00:00:00',
     venue: 'PIA, Parul University',
     organizer: 'Parul Institute of Ayurved, Parul University',
-    imageUrl: eventimg,
+    imageUrl: EventCover4,
     paymentQR: eventimg,
     status: 'Upcoming',
     description: [
@@ -378,7 +384,7 @@ export const events: Event[] = [
       'Dates: November 16th & 17th, 2024, Final Round (Offline).',
       'Time: Will be announced on the Day of Conference.',
       'Venue: PIA, Parul University.',
-      'Last Date for Registration: 24/10/2024.',
+      'Last Date for Registration: 26/10/2024',
       'Open to all students (UG, PG, and Interns) of Ayurvedic colleges and institutions across India.',
       'Each college can send a team of students including 2 Participants, 2 Backup Participants & One Mentor.',
       'Multiple entries from one college will be allowed for screening rounds.',
@@ -452,12 +458,12 @@ export const events: Event[] = [
     id: 6,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Hands-On Surgical and Skill Development Training', // Added category
-    date: '2024-10-24T00:00:00',
+    date: '2024-10-26T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
-    lastDate: '2024-10-24T00:00:00',
+    lastDate: '2024-10-26T00:00:00',
     venue: 'PIA, Parul University',
     organizer: 'Parul Institute of Ayurved, Parul University',
-    imageUrl: eventimg,
+    imageUrl: EventCover5,
     paymentQR: eventimg,
     status: 'Upcoming',
     description: [
@@ -466,7 +472,7 @@ export const events: Event[] = [
       'Dates: November 16th & 17th, 2024, Final Round (Offline).',
       'Time: Will be announced on the Day of Conference.',
       'Venue: PIA, Parul University.',
-      'Last Date for Registration: 24/10/2024.',
+      'Last Date for Registration: 26/10/2024',
       'Open to all students (UG, PG, and Interns) of Ayurvedic colleges and institutions across India.',
       'Each college can send a team of students including 2 Participants, 2 Backup Participants & One Mentor.',
       'Multiple entries from one college will be allowed for screening rounds.',

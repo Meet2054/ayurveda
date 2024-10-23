@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { events } from "@/app/components/data"; 
 import { useRouter } from 'next/navigation';
-
 interface CardDemoProps {
   category?: string;  
 }
@@ -51,22 +50,22 @@ export function CardDemo({ category }: CardDemoProps) {
                   width="100"
                   alt="Avatar"
                   src={event.imageUrl.src}
-                  className="h-10 w-10 rounded-full border-2 object-cover"
+                  className="h-10 w-10 rounded-full border-2 object-cover "
                   loading="lazy"
                 />
-                <div className="flex flex-col">
+                <div className="flex flex-col bg-gray-200 bg-opacity-35 rounded-lg pl-2">
                   <p className="font-normal text-base text-black break-words group-hover/card:text-white relative z-10 whitespace-normal">
                     {event.organizer}
                   </p>
                   <p className="text-sm text-black group-hover/card:text-white">{event.venue}</p> 
                 </div>
               </div>
-              <div className="text content">
+              <div className="text content bg-gray-200 bg-opacity-35 rounded-lg pl-2">
                 <h1 className="font-bold text-xl md:text-2xl text-gray-900 relative group-hover/card:text-white z-10 break-words whitespace-normal">
                   {event.category}
                 </h1>
                 {event.time && (
-                  <p className="font-normal text-sm break-words text-gray-900 group-hover/card:text-white relative z-10 my-4 whitespace-normal">
+                  <p className="font-semibold text-sm break-words text-gray-900 group-hover/card:text-white relative z-10 my-4 whitespace-normal">
                     {event.name}
                   </p>
                 )}

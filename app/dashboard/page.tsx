@@ -4,6 +4,7 @@ import Hero from './components/hero';
 import About from './components/about';
 import Team from './components/team';
 import Speaker from './components/speaker';
+import Sponser from './components/sponser';
 type Props = {}
 
 const Page = (props: Props) => {
@@ -12,6 +13,7 @@ const Page = (props: Props) => {
       {/* <InfiniteMovingCardsDemo/> */}
       <Hero/>       
       <CardDemo/> 
+      <Sponser/>
       <About/>
       <Speaker/>
       <Team/>
