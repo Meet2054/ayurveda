@@ -72,12 +72,12 @@ const EventsPage: React.FC = () => {
                       <span className="text-sm break-words">{formatDate(event.date)}</span> {/* Format date */}
                     </div>
                     <h3 className="text-xl font-bold break-words">
-                      {event.name}
+                      {event.category}
                     </h3>
                     <p className="text-gray-400">{event.organizer}</p>
                     <p className="text-gray-400">{event.venue}</p>
                     <div className="flex items-center mt-2 space-x-2">
-                      <span className="text-green-400">{event.category}</span>
+                      <span className="text-green-400">{event.name}</span>
                     </div>
                   </div>
                   <Image 

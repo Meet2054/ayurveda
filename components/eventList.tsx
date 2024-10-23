@@ -29,7 +29,7 @@ export function CardDemo({ category }: CardDemoProps) {
         className={cn(
           "space-x-12 py-4 inline-flex animate-infiniteXSlide"
         )}
-        style={{ animationDuration: "50s", animationIterationCount: "infinite" }} // Adjust duration as needed
+        style={{ animationDuration: "70s", animationIterationCount: "infinite" }} // Adjust duration as needed
       >
         {duplicatedEvents.map((event, index) => (
           <div
