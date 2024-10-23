@@ -63,11 +63,11 @@ export function CardDemo({ category }: CardDemoProps) {
               </div>
               <div className="text content">
                 <h1 className="font-bold text-xl md:text-2xl text-gray-900 relative group-hover/card:text-white z-10 break-words whitespace-normal">
-                  {event.name}
+                  {event.category}
                 </h1>
                 {event.time && (
                   <p className="font-normal text-sm break-words text-gray-900 group-hover/card:text-white relative z-10 my-4 whitespace-normal">
-                    {event.category}
+                    {event.name}
                   </p>
                 )}
               </div>
