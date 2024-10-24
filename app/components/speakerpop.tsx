@@ -38,7 +38,6 @@ const SpeakerPop: React.FC<SpeakerPopProps> = ({ speaker, isOpen, onClose }) => 
           </div>
           <h1 className="text-2xl font-bold">{speaker.name}</h1>
           <p className="text-gray-400">{speaker.post}</p>
-          <p className='bg-slate-200  '>gb uvu uvtrdcg cxeryu </p>
         </div>
       </div>
     </div>
