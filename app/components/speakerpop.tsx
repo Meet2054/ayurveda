@@ -19,7 +19,7 @@ const SpeakerPop: React.FC<SpeakerPopProps> = ({ speaker, isOpen, onClose }) => 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-lg bg-black bg-opacity-70">
-      <div className="relative bg-gray-900 text-white p-6 rounded-lg shadow-lg max-w-md w-full">
+      <div className="relative bg-gray-600 text-white p-6 rounded-lg shadow-lg max-w-md w-full">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-300 hover:text-gray-100 focus:outline-none"
