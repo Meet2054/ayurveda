@@ -36,8 +36,8 @@ const SpeakerPop: React.FC<SpeakerPopProps> = ({ speaker, isOpen, onClose }) => 
               className="rounded-full"
             />
           </div>
-          <h1 className="text-2xl font-bold">{speaker.name}</h1>
-          <p className="text-gray-400">{speaker.post}</p>
+          <h1 className="text-2xl text-gray-100 font-bold">{speaker.name}</h1>
+          <p className="text-gray-200 pt-4 text-center">{speaker.post}</p>
         </div>
       </div>
     </div>
