@@ -1,4 +1,4 @@
-import { Event, Team, Head, Payment } from './event';
+import { Event, Team, Head, Payment, Speaker } from './event';
 import eventimg from '@/assets/event.jpg';
 import EventCover from "@/public/EventCover1.jpg"
 import EventCover2 from "@/public/EventCover2.jpg"
@@ -585,3 +585,133 @@ export const depthead: Head[] = [
     image: principal,
   },
 ]
+
+export const speakers: Speaker[] = [
+  { 
+    id: 1, 
+    name: 'Dr Narayan Sahane', 
+    post: '', 
+    imageUrl: '/speakers/speaker1.png', 
+  },
+  { 
+    id: 2, 
+    name: 'Dr. Rajnikant Patel', 
+    post: '', 
+    imageUrl: '/speakers/speaker2.png', 
+  },
+  { 
+    id: 3, 
+    name: 'Dr Ramdas Avhad', 
+    post: '', 
+    imageUrl: '/speakers/speaker3.png', 
+  },
+  { 
+    id: 4, 
+    name: 'Vd. Tapan Kumar', 
+    post: '', 
+    imageUrl: '/speakers/speaker4.png', 
+  },
+  { 
+    id: 5, 
+    name: 'Ashutosh Kulkarni', 
+    post: '', 
+    imageUrl: '/speakers/speaker5.png', 
+  },
+  { 
+    id: 6, 
+    name: 'Dr Prasanna Rao', 
+    post: '', 
+    imageUrl: '/speakers/speaker7.png', 
+  },
+  { 
+    id: 7, 
+    name: 'Dr Shekhar Annambhotla', 
+    post: '', 
+    imageUrl: '/speakers/speaker10.png', 
+  },
+  { 
+    id: 8, 
+    name: 'Vd Harish Kumar Verma', 
+    post: '', 
+    imageUrl: '/speakers/speaker11.png', 
+  },
+  { 
+    id: 9, 
+    name: 'Dr Rajanikant Patel', 
+    post: '', 
+    imageUrl: '/speakers/speaker12.png', 
+  },
+  { 
+    id: 10, 
+    name: 'Dr P. Hemantha Kumar', 
+    post: '', 
+    imageUrl: '/speakers/speaker13.png', 
+  },
+  { 
+    id: 11, 
+    name: 'Dr sanjay pokhrel', 
+    post: '', 
+    imageUrl: '/speakers/speaker14.png', 
+  },
+  { 
+    id: 12, 
+    name: 'Anurag Varshney', 
+    post: '', 
+    imageUrl: '/speakers/speaker15.png', 
+  },
+  { 
+    id: 13, 
+    name: 'Dr. Abhishek Gupta', 
+    post: '', 
+    imageUrl: '/speakers/speaker16.png', 
+  },
+  { 
+    id: 14, 
+    name: 'Dr Rohit Sane', 
+    post: '', 
+    imageUrl: '/speakers/speaker17.png', 
+  },
+  { 
+    id: 15, 
+    name: 'Acharya Manish', 
+    post: '', 
+    imageUrl: '/speakers/speaker18.png', 
+  },
+  { 
+    id: 16, 
+    name: 'Dr. Pradeep Kumar Sahu', 
+    post: '', 
+    imageUrl: '/speakers/speaker19.png', 
+  },
+  { 
+    id: 17, 
+    name: 'Dr Suhas Kumar Shetty', 
+    post: '', 
+    imageUrl: '/speakers/speaker20.png', 
+  },
+  { 
+    id: 18, 
+    name: 'Dr. Raghuram Bhatt', 
+    post: '', 
+    imageUrl: '/speakers/speaker21.png', 
+  },
+  { 
+    id: 19, 
+    name: 'VAIDYA TAPANKUMAR. M.D.(AYU.)', 
+    post: '', 
+    imageUrl: '/speakers/speaker22.png', 
+  },
+  { 
+    id: 20, 
+    name: 'Dr Ranjit Singh', 
+    post: '', 
+    imageUrl: '/speakers/speaker23.png', 
+  },
+  { 
+    id: 21, 
+    name: 'Dr Prasanna Kerur', 
+    post: '', 
+    imageUrl: '/speakers/speaker8.png', 
+  },
+];
+
