@@ -71,6 +71,6 @@ export interface Speaker {
     id: number;
     name: string;
     imageUrl: string;
-    post: string;
+    post: Array<string>;
 
 }
