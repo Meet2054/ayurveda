@@ -38,7 +38,7 @@ const Header = (props: Props) => {
           <Image 
             src={grouplogo} 
             alt='logo' 
-            className="h-full object-contain"
+            className="h-full object-contain w-72 "
           />
         </a>
       </div>
