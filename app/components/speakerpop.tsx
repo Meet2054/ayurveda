@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
+import { Plus } from 'lucide-react';
 interface Speaker {
   id: number;
   name: string;
@@ -24,7 +24,7 @@ const SpeakerPop: React.FC<SpeakerPopProps> = ({ speaker, isOpen, onClose }) => 
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-300 hover:text-gray-100 focus:outline-none"
         >
-          ✕
+          <Plus className='rotate-45 ' />
         </button>
         <div className="flex flex-col items-center">
           <div className="relative w-32 h-32 rounded-full overflow-hidden mb-4">
@@ -38,6 +38,7 @@ const SpeakerPop: React.FC<SpeakerPopProps> = ({ speaker, isOpen, onClose }) => 
           </div>
           <h1 className="text-2xl font-bold">{speaker.name}</h1>
           <p className="text-gray-400">{speaker.post}</p>
+          <p className='bg-slate-200  '>gb uvu uvtrdcg cxeryu </p>
         </div>
       </div>
     </div>
