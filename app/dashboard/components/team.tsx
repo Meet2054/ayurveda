@@ -20,10 +20,10 @@ const Team = (props: Props) => {
               style={{ backgroundImage: `url(${member.image.src})` }}
             />
             {/* Responsive Text */}
-            <h1 className='font-bold text-black text-xl sm:text-2xl lg:text-3xl'>
+            <h1 className='font-bold text-black text-center text-xl sm:text-2xl lg:text-3xl'>
               {member.name}
             </h1>
-            <p className='text-black text-base sm:text-lg lg:text-xl'>
+            <p className='text-black text-base text-center sm:text-lg lg:text-xl'>
               {member.post}
             </p>
           </div>
@@ -38,10 +38,10 @@ const Team = (props: Props) => {
               style={{ backgroundImage: `url(${head.image.src})` }}
             />
             {/* Responsive Text */}
-            <h1 className='font-bold text-black text-xl sm:text-2xl lg:text-3xl'>
+            <h1 className='font-bold text-black text-center text-xl sm:text-2xl lg:text-3xl'>
               {head.name}
             </h1>
-            <p className='text-black text-base sm:text-lg lg:text-xl'>
+            <p className='text-black text-base text-center break-words sm:text-lg lg:text-xl'>
               {head.post}
             </p>
           </div>
