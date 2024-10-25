@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin"; // Import from the correct path
 
 const config = {
   darkMode: ["class"],
@@ -64,8 +65,8 @@ const config = {
           '100%': { transform: 'translateX(-100%)' },
         },
         slideIn: {
-          '0%': { transform: "translateX(-100%)", opacity: '0' }, // No quotes around -100%
-          '100%': { transform: "translateX(0)", opacity: '1' },   // No quotes around 0
+          '0%': { transform: "translateX(-100%)", opacity: '0' },
+          '100%': { transform: "translateX(0)", opacity: '1' },
         },
         move: {
           "0%": { transform: "translateX(-200px)" },
@@ -102,7 +103,7 @@ const config = {
             transform: 'translateX(0)',
           },
           '100%': {
-            transform: 'translateX(-100%)',
+            transform: 'translateX(-50%)',
           },
         },
       },
@@ -111,7 +112,7 @@ const config = {
         slideIn: 'slideIn 1s ease-out forwards',
         move: "move 5s linear infinite",
         floatIn: 'floatIn 2s ease-out forwards',
-        gridReveal: 'gridReveal 2s ease-in-out forwards', // Grid animation for images
+        gridReveal: 'gridReveal 2s ease-in-out forwards',
         boxReveal: 'boxReveal 0.8s ease-out forwards',
         accordionDown: "accordion-down 0.2s ease-out",
         accordionUp: "accordion-up 0.2s ease-out",
@@ -119,7 +120,20 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none',
+        },
+        '.scrollbar-hide': {
+          '-ms-overflow-style': 'none', /* IE and Edge */
+          'scrollbar-width': 'none', /* Firefox */
+        },
+      });
+    }),
+  ],
 } satisfies Config;
 
 export default config;

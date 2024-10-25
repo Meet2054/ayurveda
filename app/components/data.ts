@@ -18,9 +18,9 @@ export const events: Event[] = [
     id: 1,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Main Conference', // Added category
-    date: '2024-11-07T00:00:00',
+    date: '2024-11-16T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
-    lastDate: '2024-10-24T00:00:00',
+    lastDate: '2024-11-07T00:00:00',
     venue: 'PIA, Parul University',
     organizer: 'Parul Institute of Ayurved, Parul University',
     imageUrl: EventCover,
@@ -106,7 +106,7 @@ export const events: Event[] = [
     id: 2,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'AyurQuiz', // Added category
-    date: '2024-11-07T00:00:00',
+    date: '2024-11-16T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
     lastDate: '2024-11-07T00:00:00',
     venue: 'PIA, Parul University',
@@ -194,7 +194,7 @@ export const events: Event[] = [
     id: 3,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Webinars', // Added category
-    date: '2024-11-07T00:00:00',
+    date: '2024-11-16T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
     lastDate: '2024-11-07T00:00:00',
     venue: 'PIA, Parul University',
@@ -282,7 +282,7 @@ export const events: Event[] = [
     id: 4,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Cultural Events', // Added category
-    date: '2024-11-07T00:00:00',
+    date: '2024-11-16T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
     lastDate: '2024-11-07T00:00:00',
     venue: 'PIA, Parul University',
@@ -370,7 +370,7 @@ export const events: Event[] = [
     id: 5,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Conference', // Added category
-    date: '2024-11-07T00:00:00',
+    date: '2024-11-16T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
     lastDate: '2024-11-07T00:00:00',
     venue: 'PIA, Parul University',
@@ -458,7 +458,7 @@ export const events: Event[] = [
     id: 6,
     name: 'AYURVIMARSHA AYURQUIZ 2024',
     category: 'Hands-On Surgical and Skill Development Training', // Added category
-    date: '2024-11-07T00:00:00',
+    date: '2024-11-16T00:00:00',
     time: 'Time Will be announced on the Day of Conference',
     lastDate: '2024-11-07T00:00:00',
     venue: 'PIA, Parul University',
@@ -724,7 +724,7 @@ export const speakers: Speaker[] = [
   },
   { 
     id: 19, 
-    name: 'VAIDYA TAPANKUMAR. M.D.(AYU.)', 
+    name: 'Vaidya TapanKumar', 
     post: ['Traditional practitioner of Ayurvedic Medicine, Panch karma and Mantra therapy with 80 plus years'], 
     imageUrl: '/speakers/speaker22.png', 
   },
