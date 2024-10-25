@@ -6,11 +6,14 @@ type Props = {}
 
 const Sponser = (props: Props) => {
   return (
-    <div className='w-full h-[20vh] bg-gray-200' >
-        <div className='flex flex-row items-center justify-center gap-32' >
-            <Image src={Gama} alt="Sponser1" width={100} className='h-[14vh]' />
-            <Image src={Spark} alt="Sponser2" width={100} className='h-[14vh]' />
+    <div className='w-full h-[30vh]'>
+      <div className='flex flex-col gap-8 pt-6'>
+        <h1 className='text-4xl md:text-5xl font-medium text-center'>Sponsors</h1>
+        <div className='flex flex-row md:flex-row items-center justify-center gap-8 md:gap-32'>
+          <Image src={Gama} alt="Sponsor1" width={100} className='h-[10vh] md:h-[12vh]' />
+          <Image src={Spark} alt="Sponsor2" width={100} className='h-[10vh] md:h-[13vh]' />
         </div>
+      </div>
     </div>
   )
 }
