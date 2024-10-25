@@ -4,7 +4,7 @@ import { Plus } from 'lucide-react';
 interface Speaker {
   id: number;
   name: string;
-  post: string;
+  post: Array<string>;
   imageUrl: string;
 }
 

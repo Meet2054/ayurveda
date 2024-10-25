@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 interface Speaker {
   id: number;
   name: string;
-  post: string;
+  post: Array<string>;
   imageUrl: string;
 }
 
