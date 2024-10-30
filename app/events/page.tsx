@@ -68,7 +68,7 @@ const EventsPage: React.FC = () => {
                 <div className="flex justify-between">
                   <div className="flex-1 pr-4">
                     <div className="flex items-center space-x-2 pb-2">
-                      <span className="bg-red-500 text-xs px-2 py-1 rounded">{event.status}</span>
+                      <span className="bg-green-400 text-xs px-2 py-1 rounded">Upcoming</span>
                       <span className="text-sm break-words">{formatDate(event.date)}</span> {/* Format date */}
                     </div>
                     <h3 className="text-xl font-bold break-words">
@@ -100,14 +100,17 @@ const EventsPage: React.FC = () => {
                 <div className="flex justify-between">
                   <div className="flex-1 pr-4">
                     <div className="flex items-center space-x-2 pb-2">
-                      <span className="bg-red-500 text-xs px-2 py-1 rounded">{event.status}</span>
+                      <span className="bg-red-500 text-xs px-2 py-1 rounded">Completed</span>
                       <span className="text-sm">{formatDate(event.date)}</span> {/* Format date */}
                     </div>
                     <h3 className="text-xl font-bold break-words">
-                      {event.name}
+                      {event.category}
                     </h3>
                     <p className="text-gray-400">{event.organizer}</p>
                     <p className="text-gray-400">{event.venue}</p>
+                    <div className="flex items-center mt-2 space-x-2">
+                      <span className="text-red-500">{event.name}</span>
+                    </div>
                   </div>
                   <Image 
                     src={event.imageUrl} 
