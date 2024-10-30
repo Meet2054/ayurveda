@@ -40,6 +40,7 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
 
   // Check if registration is closed based on lastDate
   const isRegistrationClosed = new Date(event.lastDate) < new Date();
+  const isEventCompleted = new Date(event.date) < new Date();
 
   return (
     <div className="bg-gray-900 text-white min-h-screen flex justify-center items-center">
@@ -227,11 +228,14 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
           </div>
 
           {/* Prizes and Certification Section */}
-          {event.status === 'Completed' ? (
+          {isEventCompleted ? (
             <div className="bg-gray-700 p-4 rounded-lg">
               <h2 className="text-lg font-semibold">Hosts</h2>
               <div className="mt-4">
                 <p className="font-bold pb-2">{event.host}</p>
+              </div>
+              <div className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 text-lg font-semibold py-2 px-4 rounded-lg">
+                  Event Completed
               </div>
             </div>
           ) : (
@@ -284,13 +288,9 @@ const EventRegistration = ({ params }: { params: { id: string } }) => {
                 )}
               </div>
 
-              {event.status === 'Completed' ? (
-                <div className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 text-lg font-semibold py-2 px-4 rounded-lg">
-                  Event Completed
-                </div>
-              ) : isRegistrationClosed ? (
+              {isRegistrationClosed ? (
                 <a
-                  href="/eventregestration/events"
+                  href="/events"
                   className="mt-4 flex justify-center w-full items-center bg-white hover:bg-gray-200 text-gray-600 text-lg font-semibold py-2 px-4 rounded-lg"
                 >
                   Registration Closed
